@@ -1,0 +1,122 @@
+/* ------------------------------------------------------- */
+/* ---------------------- CSS NEWS ----------------------- */
+/* ------------------------------------------------------- */ 
+#news{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+    justify-content: space-between;
+}
+.newsBloc{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+}
+.newsCard{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #9da9b4;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    background-color: #454f58;
+}
+.postThumb{
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -ms-border-radius: 4px 4px 0 0;
+    -o-border-radius: 4px 4px 0 0;
+    margin: 0;
+    position: relative;
+}
+.postThumb img{
+    width: 100%;
+    height: auto;
+}
+.label{
+    color: #ffffff;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: italic;
+    font-weight: 700;
+    background-color: #79ad09;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 2px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.newsInnerContent{
+    padding: 15px;
+}
+.newsInnerContent h2{
+    color: white;
+    padding: 15px 0;
+}
+.newsInnerContent p{
+    text-align: justify;
+    font-size: 14px;
+    color: #c9c9c9;
+    padding-bottom: 15px;
+}
+.postDate{
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #c9c9c9;
+}
+.newsFooter{
+    display: table;
+    width: 100%;
+    border-top: 1px solid #9da9b4;
+}
+.newsAuthor, .newsLike{
+    width: 50%;
+    display: table-cell;
+}
+.newsAuthor{
+    text-align: left;
+    padding: 15px;
+}
+.newsLike{
+    text-align: right;
+    padding: 15px;
+}
+.newsAuthor h3{
+    font-weight: 400;
+    color: #c9c9c9;
+    display: inline;
+    vertical-align: middle;
+}
+.newsAuthor img{
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.newsLike i{
+    display: inline-block;
+    vertical-align: middle;
+    color: #c9c9c9;
+}
+.newsLike p{
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #c9c9c9;
+    display: inline-block;
+    vertical-align: middle;
+}
