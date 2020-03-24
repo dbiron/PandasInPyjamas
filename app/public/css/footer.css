@@ -1,0 +1,41 @@
+/* ------------------------------------------------------- */
+/* ---------------------- CSS FOOTER --------------------- */
+/* ------------------------------------------------------- */
+
+/* Mise en place structure + couleur de fond de la barre du footer */
+.botBackground{
+    background-color: #22282D;
+    width: 100%;
+    margin-top: 50px;
+}
+.botContainerUp, .botContainerDown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+.botContainerUp a{
+    color: rgba(180, 199, 201, 0.089);
+    font-size: 40px;
+    padding: 50px 0;
+}
+.botContainerUp a:hover{
+    color: white;
+}
+.botContainerDown i{
+    font-size: 30px;
+    color: #79AD09;
+    padding: 25px 0;
+
+}
+.botContainerDown a{
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 15px;
+}
+.botContainerDown{
+    border-top: 1px solid #9da9b4;
+}

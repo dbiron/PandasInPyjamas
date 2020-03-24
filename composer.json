@@ -1,0 +1,15 @@
+{
+    "name": "davy/pip",
+    "authors": [
+        {
+            "name": "Davy Biron",
+            "email": "sfu1982@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Project\\" : "./app/"
+        }
+    },
+    "require": {}
+}
