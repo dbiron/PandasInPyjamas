@@ -36,6 +36,7 @@
 .topMenu a{
     color: white;
     font-weight: 700;
+    font-size: 18px;
 }
 .topMenu a:hover{
     color: #79ad09;

@@ -10,11 +10,11 @@
                     <a href="">Hyper-X</a>          
                 </div>
                 <div class="botContainerDown">
-                    <i class="fab fa-facebook-square"><a href="">Facebook<br></a></i>
-                    <i class="fab fa-twitter-square"><a href="">Twitter</a></i>
-                    <i class="fab fa-instagram-square"><a href="">Instagram</a></i>
-                    <i class="fab fa-twitch"><a href="">Twitch</a></i>
-                    <i class="fab fa-youtube"><a href="">Youtube</a></i>
+                    <a href=""><i class="fab fa-facebook-square"></i> Facebook<br></a>
+                    <a href=""><i class="fab fa-twitter-square"></i> Twitter</a>
+                    <a href=""><i class="fab fa-instagram-square"></i> Instagram</a>
+                    <a href=""><i class="fab fa-twitch"></i> Twitch</a>
+                    <a href=""><i class="fab fa-youtube"></i> Youtube</a>
                 </div>
             </div>
         </footer>
