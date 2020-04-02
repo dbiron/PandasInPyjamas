@@ -17,7 +17,16 @@ class ControllerFront {
     function teamFront(){
         require 'app/views/team.php';
     }
-    function sponsorsFront(){
-        require 'app/views/sponsors.php';
+    function aboutFront(){
+        require 'app/views/about.php';
     }
+    function contactMail($lastname, $firstname, $mail, $content){
+        $userManager = new \Projet\Models\UserManager();
+        if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+            $contactUserMail = $userManager->addMail($lastname, $firstname, $subject, $mail, $content);
+            require 'app/views/contact.php';
+        } else {
+        }
+    }    
+
 }

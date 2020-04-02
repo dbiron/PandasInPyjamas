@@ -31,3 +31,7 @@ h3{
     font-size: 10px;
     text-transform: uppercase;
 }
+.content{
+    width: 1200px;
+    margin: 0 auto;
+}

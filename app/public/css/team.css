@@ -1,27 +1,27 @@
 /* ------------------------------------------------------- */
-/* ------------------- CSS BANNER NEWS ------------------- */
+/* ------------------- CSS BANNER TEAM ------------------- */
 /* ------------------------------------------------------- */
 
 /* Mise en place de la banniere */
-.bannerNews{
+.bannerTeam{
     margin: 0 auto;
     width: 1200px;
     height: 500px;  
-    background-image: url(../images/map-cache.png);
+    background-image: url(../images/map-dust2.png);
 }
-.bannerNews img{
+.bannerTeam img{
     width: 100%;  
     margin-top: -30px;
 }
 /* Mise en place de la banniere Filtre*/
-.bannerNewsFilter{
+.bannerTeamFilter{
     margin: 0 auto;
     width: 1200px;
     height: 500px;  
     display: table;
     background-color: rgba(11, 16, 19, 0.555);
 }
-.bannerNewsFilter p{
+.bannerTeamFilter p{
     color: white;
     font-size: 40px;
     font-weight: 700;
@@ -29,10 +29,10 @@
     display: table-cell;
     vertical-align: middle;
 }
-.bannerNewsFilter span{
+.bannerTeamFilter span{
     font-size: 20px;
 }
 
 /* ------------------------------------------------------- */
-/* ---------------------- CSS NEWS ----------------------- */
+/* ---------------------- CSS TEAM ----------------------- */
 /* ------------------------------------------------------- */

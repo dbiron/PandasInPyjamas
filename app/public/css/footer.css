@@ -15,6 +15,7 @@
     width: 1200px;
     margin: 0 auto;
 }
+/* Mise en place de la partie haute du footer */
 .botContainerUp a{
     color: rgba(180, 199, 201, 0.089);
     font-size: 40px;
@@ -23,6 +24,7 @@
 .botContainerUp a:hover{
     color: white;
 }
+/* Mise en place de la partie basse du footer */
 .botContainerDown i{
     font-size: 30px;
     color: #79AD09;

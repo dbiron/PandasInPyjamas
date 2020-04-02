@@ -21,8 +21,20 @@
             else if ($_GET['action'] == 'team'){
                 $ControllerFront->teamFront();
             }
-            else if ($_GET['action'] == 'sponsors'){
-                $ControllerFront->sponsorsFront();
+            else if ($_GET['action'] == 'about'){
+                $ControllerFront->aboutFront();
+            }
+            elseif ($_GET['action'] == 'contactMail') {
+                $lastname = htmlspecialchars($_POST['nom']);
+                $firstname = htmlspecialchars($_POST['prenom']);
+                $mail = htmlspecialchars($_POST['email']);
+                $subject = htmlspecialchars($_POST['sujet']);
+                $content = htmlspecialchars($_POST['message']);
+                if (!empty($lastname) && (!empty($firstname) && (!empty($subject) && (!empty($mail) && (!empty($content)))))) {
+                    $ControleurFront->contactMail($lastname, $firstname, $subject, $mail, $content);
+                } else {
+                    throw new Exception('tous les champs ne sont pas remplis');
+                }
             }
         }
         else {

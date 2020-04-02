@@ -3,14 +3,19 @@
 include 'layouts/head.php';
 include 'layouts/header.php';
 ?>
+<div class="bannerHome">
+    <div class="bannerHomeFilter">
+        <p>PANDAS IN PYJAMAS<br><span>CSGO team since 2020</span></p>
+    </div>
+</div>
 <section id="news">
         <article class="newsBloc">
                 <div class="newsCard">
                     <figure class="postThumb">
                         <div class="postCat">
-                            <span class="label">La Team</span>
+                            <span class="label">Team News</span>
                         </div>
-                        <a href="#"><img src="app/public/images/news.jpg" alt=""></a>
+                        <a href="#"><img src="app/public/images/news.jpg" alt="Counter-Terrorist and Lootbox" title="Counter-Terrorist and Lootbox"></a>
                     </figure>
                     <div class="newsInnerContent">
                         <time datetime="2020-03-10" class="postDate">03 Mars 2020</time>
@@ -19,7 +24,7 @@ include 'layouts/header.php';
                     </div>
                     <div class="newsFooter">
                         <div class="newsAuthor">
-                            <img src="app/public/images/avatar.jpg" alt="">
+                            <img src="app/public/images/avatar.jpg" alt="avatar" title="avatar">
                             <h3>Nom de L'auteur</h3>
                         </div>
                         <div class="newsLike">
@@ -33,9 +38,9 @@ include 'layouts/header.php';
             <div class="newsCard">
                 <figure class="postThumb">
                     <div class="postCat">
-                        <span class="label">La Team</span>
+                        <span class="label">Team News</span>
                     </div>
-                    <a href="#"><img class="imgZoom" src="app/public/images/news.jpg" alt=""></a>
+                    <a href="#"><img class="imgZoom" src="app/public/images/news.jpg" alt="Counter-Terrorist and Lootbox" title="Counter-Terrorist and Lootbox"></a>
                 </figure>
                 <div class="newsInnerContent">
                     <time datetime="2020-03-10" class="postDate">03 Mars 2020</time>
@@ -44,7 +49,7 @@ include 'layouts/header.php';
                 </div>
                 <div class="newsFooter">
                     <div class="newsAuthor">
-                        <img src="app/public/images/avatar.jpg" alt="">
+                        <img src="app/public/images/avatar.jpg" alt="avatar" title="avatar">
                         <h3>Nom de L'auteur</h3>
                     </div>
                     <div class="newsLike">
@@ -58,9 +63,9 @@ include 'layouts/header.php';
             <div class="newsCard">
                 <figure class="postThumb">
                     <div class="postCat">
-                        <span class="label">La Team</span>
+                        <span class="label">Team News</span>
                     </div>
-                    <a href="#"><img src="app/public/images/news.jpg" alt=""></a>
+                    <a href="#"><img src="app/public/images/news.jpg" alt="Counter-Terrorist and Lootbox" title="Counter-Terrorist and Lootbox"></a>
                 </figure>
                 <div class="newsInnerContent">
                     <time datetime="2020-03-10" class="postDate">03 Mars 2020</time>
@@ -69,7 +74,7 @@ include 'layouts/header.php';
                 </div>
                 <div class="newsFooter">
                     <div class="newsAuthor">
-                        <img src="app/public/images/avatar.jpg" alt="">
+                        <img src="app/public/images/avatar.jpg" alt="avatar" title="avatar">
                         <h3>Nom de L'auteur</h3>
                     </div>
                     <div class="newsLike">
