@@ -21,7 +21,7 @@
     display: table;
     background-color: rgba(11, 16, 19, 0.555);
 }
-.bannerAboutFilter p{
+.bannerAboutFilter h1{
     color: white;
     font-size: 40px;
     font-weight: 700;
@@ -36,3 +36,18 @@
 /* ------------------------------------------------------- */
 /* --------------------- CSS ABOUT US -------------------- */
 /* ------------------------------------------------------- */
+
+.about{
+    width: 60%;
+    margin: 0 auto;
+}
+.about h2{
+    color: white;
+    padding: 50px 0;
+}
+.about p{
+    color: rgba(180, 199, 201, 0.40);
+    font-size: 16px;
+    text-align: justify;
+    padding-bottom: 10px;
+}

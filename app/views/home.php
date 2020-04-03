@@ -5,7 +5,7 @@ include 'layouts/header.php';
 ?>
 <div class="bannerHome">
     <div class="bannerHomeFilter">
-        <p>PANDAS IN PYJAMAS<br><span>CSGO team since 2020</span></p>
+        <h1>PANDAS IN PYJAMAS<br><span>CSGO team since 2020</span></h1>
     </div>
 </div>
 <section id="news">

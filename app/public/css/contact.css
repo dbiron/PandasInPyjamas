@@ -21,7 +21,7 @@
     display: table;
     background-color: rgba(11, 16, 19, 0.555);
 }
-.bannerContactFilter p{
+.bannerContactFilter h1{
     color: white;
     font-size: 40px;
     font-weight: 700;
@@ -51,7 +51,7 @@
     text-align: center; 
 }
 .contactInput input{
-    width: 50%;
+    width: 60%;
     margin: 10px 0;
     padding: 10px 0;
     background-color: #0B1013;
@@ -64,7 +64,7 @@
 }
 .contactTextarea textarea{
     resize: none;
-    width: 50%;
+    width: 60%;
     height: 300px;
     margin: 10px 0;
     padding: 10px 0;
@@ -75,7 +75,7 @@
     font-size: 16px;
 }
 .contactButton input{
-    width: 50%;
+    width: 60%;
     margin: 10px 0;
     padding: 10px 0;
     background-color: #79AD09;

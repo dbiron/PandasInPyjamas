@@ -8,7 +8,7 @@ include 'layouts/header.php';
     <section>
         <div class="bannerContact">
             <div class="bannerContactFilter">
-                <p>CONTACT<br><span>Si vous voulez nous envoyer un petit message, c'est par ici que sa se passe</span></p>
+                <h1>CONTACT<br><span>Si vous voulez nous envoyer un petit message, c'est par ici que sa se passe</span></h1>
             </div>
         </div>    
     </section>

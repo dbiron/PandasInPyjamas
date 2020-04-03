@@ -7,7 +7,7 @@ include 'layouts/header.php';
     <section>
         <div class="bannerNews">
             <div class="bannerNewsFilter">
-                <p>NEWS<br><span>Toutes les news à propos de la team se trouvent ici</span></p>
+                <h1>NEWS<br><span>Toutes les news à propos de la team se trouvent ici</span></h1>
             </div>
         </div>    
     </section>

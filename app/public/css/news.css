@@ -21,7 +21,7 @@
     display: table;
     background-color: rgba(11, 16, 19, 0.555);
 }
-.bannerNewsFilter p{
+.bannerNewsFilter h1{
     color: white;
     font-size: 40px;
     font-weight: 700;
