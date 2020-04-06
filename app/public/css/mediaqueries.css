@@ -67,6 +67,13 @@
     .contactInput input, .contactTextarea textarea, .contactButton input{
         width: 90%;
     }
+    /* Mise en place de Team */
+    .teamBloc{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+    }
     /* Mise en place du Footer */
     /* ---- Footer Top ---- */
     .botContainerUp{

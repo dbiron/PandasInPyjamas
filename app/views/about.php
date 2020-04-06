@@ -15,11 +15,11 @@ include 'layouts/header.php';
     <!---------- Section About-Us ---------->
     <section class="about">
         <h2>Qui sommes nous ?</h2>
-        <p>Fondée en 2020, Pandas in Pyjamas est une équipe esport qui sévit actuellement sur le jeux Counter-Strike Global Offensive grace à son équipe de 5 joueurs Pros.</p>
-        <p>Notre structure met à disposition de ses joueurs du matériel adapté aux besoins de chacuns grace à nos différents partenaires ainsi que des séances d'entrainements personnalisés. Tout est mis en oeuvre afins que les joueurs n'aient à se soucier de rien.</p>
+        <p>Fondée en 2020, Pandas in Pyjamas est une équipe esport qui sévit actuellement sur le jeux Counter-Strike Global Offensive grâce à son équipe de 5 joueurs Pros.</p>
+        <p>Notre structure met à disposition de ses joueurs du matériel adapté aux besoins de chacuns grace à nos différents partenaires ainsi que des séances d'entrainements personnalisés. Tout est mis en oeuvre afin que les joueurs n'aient à se soucier de rien.</p>
         <h2>Notre but</h2>
         <p>Notre but est de former la meilleure équipe possible de Counter-Strike Global Offensive, afin de dominer dans un premier temps la scène française avant d'aller faire nos preuves sur la scène mondiale.</p>
-        <p>Pandas in Pyjamas vise à être la principale organisation d'esports au monde, à l'intérieur comme à l'extérieur du jeu.</p> 
+        <p>Pandas in Pyjamas vise à être la principale organisation d'esport au monde, à l'intérieur comme à l'extérieur du jeu.</p> 
         <p>Pandas in Pyjamas doit être synonyme de qualité supérieure, de professionnalisme et d'intégrité.</p>
         <h2>Nos valeures fondamentales</h2>
         <p>Nous sommes passionnés par le sport électronique et, plus important encore, les personnes qui composent notre base de fans et nos communautés à travers le monde.</p>

@@ -20,7 +20,7 @@ class ControllerFront {
     function aboutFront(){
         require 'app/views/about.php';
     }
-    function contactMail($lastname, $firstname, $mail, $content){
+    function contactMail($lastname, $firstname, $subject, $mail, $content){
         $userManager = new \Projet\Models\UserManager();
         if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
             $contactUserMail = $userManager->addMail($lastname, $firstname, $subject, $mail, $content);

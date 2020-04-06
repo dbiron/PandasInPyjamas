@@ -40,12 +40,13 @@
 #team{
     display: flex;
     margin: 0 auto;
-    padding-top: 50px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .teamBloc{
     display: flex;
     width: 31%;
+    padding-top: 50px;
 }
 .teamCard{
     display: flex;
