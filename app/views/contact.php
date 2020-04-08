@@ -16,13 +16,13 @@ include 'layouts/header.php';
     <section id="contact">
         <form class="contactForm" method="post" action="index.php?action=contactMail" onsubmit="return verifForm(this)">
             <div class="contactInput">
-                <input type="text" name="nom" placeholder="Votre nom">
-                <input type="text" name="prenom" placeholder="Votre prénom">
-                <input type="text" name="email" placeholder="Votre adresse email">
-                <input type="text" name="sujet" placeholder="Sujet du message">
+                <input type="text" name="nom" placeholder="Votre nom *">
+                <input type="text" name="prenom" placeholder="Votre prénom *">
+                <input type="text" name="email" placeholder="Votre adresse email *">
+                <input type="text" name="sujet" placeholder="Sujet du message *">
             </div>
             <div class="contactTextarea">
-                <textarea type="text" name="message" placeholder="Ecrivez votre message"></textarea>
+                <textarea type="text" name="message" placeholder="Ecrivez votre message *"></textarea>
             </div> 
             <div class="contactButton">
                 <input type="submit" value="Envoyer" name="envoi">

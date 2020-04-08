@@ -9,10 +9,6 @@
     height: 500px;  
     background-image: url(../images/map-museum.png);
 }
-.bannerContact img{
-    width: 100%;  
-    margin-top: -30px;
-}
 /* Mise en place de la banniere Filtre*/
 .bannerContactFilter{
     margin: 0 auto;

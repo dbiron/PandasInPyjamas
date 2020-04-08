@@ -21,7 +21,7 @@ include 'layouts/header.php';
         <p>Notre but est de former la meilleure équipe possible de Counter-Strike Global Offensive, afin de dominer dans un premier temps la scène française avant d'aller faire nos preuves sur la scène mondiale.</p>
         <p>Pandas in Pyjamas vise à être la principale organisation d'esport au monde, à l'intérieur comme à l'extérieur du jeu.</p> 
         <p>Pandas in Pyjamas doit être synonyme de qualité supérieure, de professionnalisme et d'intégrité.</p>
-        <h2>Nos valeures fondamentales</h2>
+        <h2>Nos valeurs fondamentales</h2>
         <p>Nous sommes passionnés par le sport électronique et, plus important encore, les personnes qui composent notre base de fans et nos communautés à travers le monde.</p>
         <p>Le partenariat et la collaboration à tous les niveaux sont essentiels. Nous créons un environnement dans lequel chaque "Panda" est autorisé à contribuer et est reconnu pour ses efforts.</p>
         <p>Nous nous engageons à stimuler la croissance individuelle de nos joueurs en créant une culture où chacun peut développer et améliorer ses performances.</p>

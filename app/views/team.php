@@ -30,7 +30,7 @@ include 'layouts/header.php';
                         <h3>Total Kills</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="rushTK"></p>
+                        <p id="rush_total_kills"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -38,7 +38,7 @@ include 'layouts/header.php';
                         <h3>Total Death</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="rushTD"></p>
+                        <p id="rush_total_deaths"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -46,7 +46,7 @@ include 'layouts/header.php';
                         <h3>Total Planted Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="rushTPB"></p>
+                        <p id="rush_total_planted_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -54,7 +54,7 @@ include 'layouts/header.php';
                         <h3>Total Defused Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="rushTDB"></p>
+                        <p id="rush_total_defused_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -62,7 +62,7 @@ include 'layouts/header.php';
                         <h3>Total MVP</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="rushMVP"></p>
+                        <p id="rush_total_mvps"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -70,7 +70,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Won</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="rushTMW"></p>
+                        <p id="rush_total_matches_won"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -78,7 +78,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Played</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="rushTMP"></p>
+                        <p id="rush_total_matches_played"></p>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@ include 'layouts/header.php';
                         <h3>Total Kills</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="mouzTK"></p>
+                        <p id="mouz_total_kills"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -107,7 +107,7 @@ include 'layouts/header.php';
                         <h3>Total Death</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="mouzTD"></p>
+                        <p id="mouz_total_deaths"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -115,7 +115,7 @@ include 'layouts/header.php';
                         <h3>Total Planted Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="mouzTPB"></p>
+                        <p id="mouz_total_planted_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -123,7 +123,7 @@ include 'layouts/header.php';
                         <h3>Total Defused Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="mouzTDB"></p>
+                        <p id="mouz_total_defused_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -131,7 +131,7 @@ include 'layouts/header.php';
                         <h3>Total MVP</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="mouzMVP"></p>
+                        <p id="mouz_total_mvps"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -139,7 +139,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Won</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="mouzTMW"></p>
+                        <p id="mouz_total_matches_won"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -147,7 +147,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Played</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="mouzTMP"></p>
+                        <p id="mouz_total_matches_played"></p>
                     </div>
                 </div>
             </div>
@@ -168,7 +168,7 @@ include 'layouts/header.php';
                         <h3>Total Kills</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="dupreehTK"></p>
+                        <p id="dupreeh_total_kills"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -176,7 +176,7 @@ include 'layouts/header.php';
                         <h3>Total Death</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="dupreehTD"></p>
+                        <p id="dupreeh_total_deaths"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -184,7 +184,7 @@ include 'layouts/header.php';
                         <h3>Total Planted Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="dupreehTPB"></p>
+                        <p id="dupreeh_total_planted_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -192,7 +192,7 @@ include 'layouts/header.php';
                         <h3>Total Defused Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="dupreehTDB"></p>
+                        <p id="dupreeh_total_defused_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -200,7 +200,7 @@ include 'layouts/header.php';
                         <h3>Total MVP</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="dupreehMVP"></p>
+                        <p id="dupreeh_total_mvps"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -208,7 +208,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Won</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="dupreehTMW"></p>
+                        <p id="dupreeh_total_matches_won"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -216,7 +216,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Played</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="dupreehTMP"></p>
+                        <p id="dupreeh_total_matches_played"></p>
                     </div>
                 </div>
             </div>
@@ -237,7 +237,7 @@ include 'layouts/header.php';
                         <h3>Total Kills</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="deadfoxTK"></p>
+                        <p id="deadfox_total_kills"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -245,7 +245,7 @@ include 'layouts/header.php';
                         <h3>Total Death</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="deadfoxTD"></p>
+                        <p id="deadfox_total_deaths"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -253,7 +253,7 @@ include 'layouts/header.php';
                         <h3>Total Planted Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="deadfoxTPB"></p>
+                        <p id="deadfox_total_planted_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -261,7 +261,7 @@ include 'layouts/header.php';
                         <h3>Total Defused Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="deadfoxTDB"></p>
+                        <p id="deadfox_total_defused_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -269,7 +269,7 @@ include 'layouts/header.php';
                         <h3>Total MVP</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="deadfoxMVP"></p>
+                        <p id="deadfox_total_mvps"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -277,7 +277,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Won</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="deadfoxTMW"></p>
+                        <p id="deadfox_total_matches_won"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -285,7 +285,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Played</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="deadfoxTMP"></p>
+                        <p id="deadfox_total_matches_played"></p>
                     </div>
                 </div>
             </div>
@@ -306,7 +306,7 @@ include 'layouts/header.php';
                         <h3>Total Kills</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunbTK"></p>
+                        <p id="cajunb_total_kills"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -314,7 +314,7 @@ include 'layouts/header.php';
                         <h3>Total Death</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunbTD"></p>
+                        <p id="cajunb_total_deaths"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -322,7 +322,7 @@ include 'layouts/header.php';
                         <h3>Total Planted Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunbTPB"></p>
+                        <p id="cajunb_total_planted_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -330,7 +330,7 @@ include 'layouts/header.php';
                         <h3>Total Defused Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunbTDB"></p>
+                        <p id="cajunb_total_defused_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -338,7 +338,7 @@ include 'layouts/header.php';
                         <h3>Total MVP</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunbMVP"></p>
+                        <p id="cajunb_total_mvps"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -346,7 +346,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Won</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunbTMW"></p>
+                        <p id="cajunb_total_matches_won"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -354,7 +354,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Played</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunbTMP"></p>
+                        <p id="cajunb_total_matches_played"></p>
                     </div>
                 </div>
             </div>
@@ -375,7 +375,7 @@ include 'layouts/header.php';
                         <h3>Total Kills</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="flushaTK"></p>
+                        <p id="flusha_total_kills"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -383,7 +383,7 @@ include 'layouts/header.php';
                         <h3>Total Death</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="flushaTD"></p>
+                        <p id="flusha_total_deaths"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -391,7 +391,7 @@ include 'layouts/header.php';
                         <h3>Total Planted Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="flushaTPB"></p>
+                        <p id="flusha_total_planted_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -399,7 +399,7 @@ include 'layouts/header.php';
                         <h3>Total Defused Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="flushaTDB"></p>
+                        <p id="flusha_total_defused_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -407,7 +407,7 @@ include 'layouts/header.php';
                         <h3>Total MVP</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="flushaMVP"></p>
+                        <p id="flusha_total_mvps"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -415,7 +415,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Won</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="flushaTMW"></p>
+                        <p id="flusha_total_matches_won"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -423,7 +423,7 @@ include 'layouts/header.php';
                         <h3>Total Matches Played</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="flushaTMP"></p>
+                        <p id="flusha_total_matches_played"></p>
                     </div>
                 </div>
             </div>
