@@ -3,11 +3,20 @@
 namespace Project\Models;
 
 class FrontManager extends Manager{
-    public function viewFront(){
+    public function viewArticles(){
+
         $bdd = $this -> dbConnect();
-        $req = $bdd->prepare ("SELECT id, title, content FROM articles");
+        $req = $bdd->prepare ("SELECT id, title, content, image, created_at FROM articles");
         $req->execute(array());
-        $req = $req->fetch()[1];
         return $req;
     }
+
+    public function viewArticle($id){
+
+        $bdd = $this -> dbConnect();
+        $req = $bdd->prepare ("SELECT id, title, content, image, created_at FROM articles WHERE id=?");
+        $req->execute(array($id));
+        return $req->fetch();
+    }
 }
+

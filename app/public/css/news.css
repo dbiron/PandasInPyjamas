@@ -32,3 +32,38 @@
 /* ------------------------------------------------------- */
 /* ---------------------- CSS NEWS ----------------------- */
 /* ------------------------------------------------------- */
+
+.article{
+    width: 60%;
+    margin: 0 auto;
+}
+.articleContent{
+    padding: 50px 0;
+    border-top: 1px solid #9da9b4;
+}
+.articleContent:first-child{
+    border: none;
+}
+.articleContent:last-child{
+    padding-bottom: 0;
+}
+.article h2{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+}
+.article h2 a{
+    color: white;
+}
+.article h2 a:hover{
+    color: #79ad09;
+}
+.articleImage{
+    width: 100%;
+}
+.articleImage img{
+    width: 100%;
+}
+.articleInnerContent{
+    width: 100%;
+}

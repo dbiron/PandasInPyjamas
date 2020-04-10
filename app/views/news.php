@@ -11,6 +11,17 @@ include 'layouts/header.php';
             </div>
         </div>    
     </section>
+    <!---------- Section News ---------->
+    <section class="article">
+        <?php while($article = $articles->fetch()): ?>
+        <article class="articleContent">
+            <figure class="articleImage"><img src="app/public/images/<?= $article['image'] ?>"></figure>
+            <div class="articleInnerContent">
+                <h2><a href="index.php?action=article&id=<?= $article['id']?>"><?= $article['title'] ?></a></h2>
+            </div>
+        </article>
+    <?php endwhile; ?>
+    </section>
 </main>
 
 <?php

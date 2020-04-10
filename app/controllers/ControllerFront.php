@@ -3,15 +3,18 @@
 namespace Project\Controllers;
 
 class ControllerFront {
+
     function home(){
-        $homeFront = new \Project\Models\FrontManager();
-        $accueil = $homeFront->viewFront();
+        $homeArticles = new \Project\Models\FrontManager();
+        $articles = $homeArticles->viewArticles();
         require 'app/views/home.php';
     }
     function contactFront(){
         require 'app/views/contact.php';
     }
     function newsFront(){
+        $homeArticles = new \Project\Models\FrontManager();
+        $articles = $homeArticles->viewArticles();
         require 'app/views/news.php';
     }
     function teamFront(){
@@ -19,5 +22,10 @@ class ControllerFront {
     }
     function aboutFront(){
         require 'app/views/about.php';
+    }
+    function articleFront($id){
+        $homeArticle = new \Project\Models\FrontManager();
+        $article = $homeArticle->viewArticle($id);
+        require 'app/views/article.php';
     }
 }

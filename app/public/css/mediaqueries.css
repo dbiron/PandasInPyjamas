@@ -74,6 +74,10 @@
         width: 90%;
         margin: 0 auto;
     }
+    /* Mise en place des articles de la page News */
+    .article{
+        width: 90%;
+    }
     /* Mise en place du Footer */
     /* ---- Footer Top ---- */
     .botContainerUp{
