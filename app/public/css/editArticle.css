@@ -1,0 +1,21 @@
+/* ------------------------------------------------------- */
+/* -------------------- CSS editArticle ------------------ */
+/* ------------------------------------------------------- */
+
+#editArticle{
+    margin-top: 50px;
+}
+.editArticleList{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.editArticleList a{
+    text-decoration: none;
+    color: #9da9b4;
+    display: table-cell;
+}
+.editArticleList h2{
+    color: white;
+    display: table-cell;
+}

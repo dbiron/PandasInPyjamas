@@ -18,6 +18,10 @@
         <link rel="stylesheet" href="app/public/css/contact.css">
         <link rel="stylesheet" href="app/public/css/footer.css">
         <link rel="stylesheet" href="app/public/css/contact.css">
+        <link rel="stylesheet" href="app/public/css/login.css">
+        <link rel="stylesheet" href="app/public/css/panelAdmin.css">
+        <link rel="stylesheet" href="app/public/css/newArticle.css">
+        <link rel="stylesheet" href="app/public/css/editArticle.css">
         <link rel="stylesheet" href="app/public/css/mediaqueries.css">
         <!-- Title -->
         <title>Pandas in Pyjamas - Team Esport</title>

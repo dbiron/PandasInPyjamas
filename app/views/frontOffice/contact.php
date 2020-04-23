@@ -1,6 +1,6 @@
 <?php
-include 'layouts/head.php';
-include 'layouts/header.php';
+include 'app\views\layouts\head.php';
+include 'app\views\layouts\header.php';
 ?>
 
 <main class="content">
@@ -32,4 +32,4 @@ include 'layouts/header.php';
 </main>
 
 <?php
-include 'layouts/footer.php';
+include 'app\views\layouts\footer.php';

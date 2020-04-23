@@ -1,0 +1,24 @@
+/* ------------------------------------------------------- */
+/* -------------------- CSS PANEL ADMIN ------------------ */
+/* ------------------------------------------------------- */
+
+/* Mise en place des 2 Blocs */
+#admin{
+    display: flex;
+    padding-top: 50px;
+}
+
+/* Mise en forme des blocs */
+.adminArticle{
+    background-color: #22282D;
+    margin: 0 20px 0;
+}
+.adminArticle h1{
+    text-align: center;
+    color: white;
+}
+
+/* Mise en forme des images */
+.adminArticle figure{
+    margin: 0 auto;
+}

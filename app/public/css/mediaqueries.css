@@ -96,5 +96,10 @@
     }
     .botContainerDown a {
         padding: 0 10px;
-    } 
+    }
+    /* ------------------------------------- Admin -----------------------------------*/
+     /* Mise en place de newArticle */
+     .newArticleInput input, .newArticleTextarea textarea, .newArticleButton input{
+        width: 90%;
+    }
 }

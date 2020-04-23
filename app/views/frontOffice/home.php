@@ -1,6 +1,6 @@
 <?php
-include 'layouts/head.php';
-include 'layouts/header.php';
+include 'app\views\layouts\head.php';
+include 'app\views\layouts\header.php';
 ?>
 <div class="bannerHome">
     <div class="bannerHomeFilter">
@@ -36,5 +36,5 @@ include 'layouts/header.php';
             </article>
         <?php endwhile; ?>
     </section>
-<?php
-include 'layouts/footer.php';
+    <?php
+include 'app\views\layouts\footer.php';
