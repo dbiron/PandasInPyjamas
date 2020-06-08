@@ -5,6 +5,6 @@ RewriteRule ^admin$ admin.php?action=panelAdmin
 <FilesMatch "admin">
 Authname "Espace administration"
 Authtype Basic
-AuthUserFile "C:\laragon\www\pip\.htpasswd"
+AuthUserFile "C:\laragon\www\pip\app\views\backOffice\.htpasswd"
 Require valid-user
 </FilesMatch>

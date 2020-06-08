@@ -79,7 +79,9 @@
     color: white;
     font-family: 'roboto';
     font-size: 16px;
+    cursor: pointer;
 }
 .contactButton input:hover{
     background-color: #0B1013;
+    cursor: pointer;
 }

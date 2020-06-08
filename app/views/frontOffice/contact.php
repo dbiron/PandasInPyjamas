@@ -24,7 +24,7 @@ include 'app\views\layouts\header.php';
             <div class="contactTextarea">
                 <textarea type="text" name="message" placeholder="Ecrivez votre message *"></textarea>
             </div> 
-            <div class="contactButton">
+            <div class="contactButton buttonEffect">
                 <input type="submit" value="Envoyer" name="envoi">
             </div>       
         </form>

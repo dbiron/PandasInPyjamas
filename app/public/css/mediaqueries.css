@@ -22,30 +22,30 @@
         padding: 0;
         text-align: center;
     }
-    .topMenu ul li {
+    .topMenuLeft ul li {
         display: block;
         line-height: 20px;
         font-size: 1.2rem;
-        padding: 0;
+        padding: 2px 0;
     }
-    .topMenu ul {
+    .topMenuLeft ul {
         display: none;
-        padding-top: 150px;
+        margin-bottom: 15px;
     }
-    .topMenu .menuMobile img {
-        padding-top: 140px;
+    .topMenuLeft .menuMobile svg {
+        padding-top: 100px;
         width: 40px;
         height: 40px;
     }
-    .topMenu .menuMobile {
+    .topMenuLeft .menuMobile {
         display: block;
     }
-    .topMenu #menuMobile:not(:checked),
+    .topMenuLeft #menuMobile:not(:checked),
     #menuMobile:checked {
         position: absolute;
         left: -9999px;
     }
-    .topMenu [type="checkbox"]:checked+label+ul {
+    .topMenuLeft [type="checkbox"]:checked+label+ul {
         display: block;
     }
     
@@ -57,14 +57,21 @@
     /* Mise en place des News */
     #news{
         flex-wrap: wrap;
-        width: 100%;
+        width: 90%;
     }
     .newsBloc{
         width: 100%;
-        padding: 0 10px 10px 10px;
     }
     /* Mise en place de Contact */
     .contactInput input, .contactTextarea textarea, .contactButton input{
+        width: 90%;
+    }
+    /* Mise en place de Inscription */
+    .inscriptionInput input, .inscriptionButton input{
+        width: 90%;
+    }
+    /* Mise en place de Login */
+    .loginInput input, .loginButton input{
         width: 90%;
     }
     /* Mise en place de Team */
@@ -76,6 +83,14 @@
     }
     /* Mise en place des articles de la page News */
     .article{
+        width: 90%;
+    }
+    /* Mise en place de la page About Us */
+    .about{
+        width: 90%;
+    }
+    /* Mise en place de la page CGU */
+    .cgu{
         width: 90%;
     }
     /* Mise en place du Footer */

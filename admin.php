@@ -15,11 +15,26 @@
             if ($_GET['action'] == 'panelAdmin'){
                 $ControllerBack->panelAdmin();
             }
-            if ($_GET['action'] == 'newArticle'){
+            else if ($_GET['action'] == 'newArticle'){
                 $ControllerBack->newArticle();
             }
-            if ($_GET['action'] == 'editArticle'){
+            else if ($_GET['action'] == 'createArticle'){
+                $ControllerBack->createArticle();
+            }
+            else if ($_GET['action'] == 'editArticle'){
                 $ControllerBack->editArticle();
+            }
+            else if ($_GET['action'] == 'updateArticle'){
+                $id = htmlspecialchars($_GET['id']);
+                $ControllerBack->updateArticle($id);
+            }
+            else if ($_GET['action'] == 'modifArticle'){
+                $id = htmlspecialchars($_GET['id']);
+                $ControllerBack->modifArticle($id);
+            }
+            else if ($_GET['action'] == 'deleteArticle'){
+                $id = htmlspecialchars($_GET['id']);
+                $ControllerBack->deleteArticle($id);
             }
         }
 

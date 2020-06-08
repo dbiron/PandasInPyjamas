@@ -15,6 +15,7 @@
     width: 1200px;
     margin: 0 auto;
     position: relative;
+    padding: 25px 0;
 }
   
 /*Mise en place du logo au centre */
@@ -32,36 +33,35 @@
 }
   
 /* Mise en forme du menu */
-.mainMenu{
-    padding: 25px 0;
-}
-.topMenu a{
+.topMenuLeft a, .topMenuRight a{
     color: white;
     font-weight: 700;
     font-size: 18px;
 }
-.topMenu a:hover{
+.topMenuLeft a:hover, .topMenuRight a:hover{
     color: #79ad09;
 }
-.topMenu ul{
+.topMenuLeft ul, .topMenuRight ul{
     word-spacing: 25px;
 }
-.topMenu ul li{
+.topMenuLeft ul li, .topMenuRight ul li{
     color: white;
     display: inline;
 }
 /* Menu Burger */
 .mainMenu #menuMobile,
 .mainMenu .menuMobile {
-    display: none
+    display: none;
 }
-  
-/* Mise en forme du lien de Login */
-.login a{
-    color: white;
-    font-weight: 700;
-    font-size: 18px;
+/* Arrow Scroll Top */
+#arrowTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
 }
-.login a:hover{
-    color: #79ad09;
+#arrowTop img {
+    width: 32px;
+    height: 32px;
 }

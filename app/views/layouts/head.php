@@ -1,14 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
+    <!--++++++++ Head ++++++++-->
     <head>
-        <!-- Required meta tags -->
+        <!---------- Meta tags requis ---------->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="keywords" content="ESport, Team, Jeux-Vidéo, Game">
-        <meta name="description" content="Pandas in Pyjamas - Le site de la Team Esport">
+        <!---------- Keywords et Description en dynamique ---------->
+        <meta name="keywords" content="<?php if (isset($keywords)) {echo $keywords;} else {echo "ESport, Team, Jeux-Vidéo, Game, Counter-Strike";} ?>">
+        <meta name="description" content="<?php if (isset($description)) {echo $description;} else {echo "Pandas in Pyjamas - Le site de la Team Esport";} ?>">
         <!-- CSS Sheets -->
+        <!---------- Appel de Jquery ---------->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!---------- Appel de Font-Awesome ---------->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+        <!---------- Appel du Favico ---------->
+        <link rel="shortcut icon" type="image/ico" href="app\public\images\favico.ico"/>
         <link rel="stylesheet" href="app/public/css/style.css">
         <link rel="stylesheet" href="app/public/css/header.css">
         <link rel="stylesheet" href="app/public/css/about.css">
@@ -22,7 +29,11 @@
         <link rel="stylesheet" href="app/public/css/panelAdmin.css">
         <link rel="stylesheet" href="app/public/css/newArticle.css">
         <link rel="stylesheet" href="app/public/css/editArticle.css">
+        <link rel="stylesheet" href="app/public/css/inscription.css">
+        <link rel="stylesheet" href="app/public/css/cgu.css">
+        <link rel="stylesheet" href="app/public/css/buttonEffect.css">
         <link rel="stylesheet" href="app/public/css/mediaqueries.css">
-        <!-- Title -->
-        <title>Pandas in Pyjamas - Team Esport</title>
-  </head>
+        <!---------- Title en dynamique ---------->
+        <title><?php if (isset($title)) {echo $title;} else {echo "Pandas in Pyjamas - Le site de la Team Esport";} ?></title>
+    </head>
+    <!--++++++++ Head (END) ++++++++-->

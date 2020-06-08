@@ -1,21 +1,21 @@
 /* ------------------------------------------------------- */
-/* ---------------------- CSS LOGIN ---------------------- */
+/* ------------------- CSS INSCRIPTION ------------------- */
 /* ------------------------------------------------------- */
 
-#login{
+#inscription{
     padding-top: 50px;
 }
-.loginInput ::placeholder{
+.inscriptionInput ::placeholder{
     font-family: 'roboto';
     text-align: center;
     color: white;
     font-size: 16px;
 }
-.loginInput, .loginButton{
+.inscriptionInput, .inscriptionButton{
     width: 100%;
     text-align: center; 
 }
-.loginInput input{
+.inscriptionInput input{
     width: 60%;
     margin: 10px 0;
     padding: 10px 0;
@@ -27,7 +27,7 @@
     font-family: 'roboto';
     font-size: 16px;
 }
-.loginButton input{
+.inscriptionButton input{
     width: 60%;
     margin: 10px 0;
     padding: 10px 0;
@@ -38,7 +38,7 @@
     font-size: 16px;
     cursor: pointer;
 }
-.loginButton input:hover{
+.inscriptionButton input:hover{
     background-color: #0B1013;
     cursor: pointer;
 }

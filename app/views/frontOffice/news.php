@@ -3,7 +3,7 @@ include 'app\views\layouts\head.php';
 include 'app\views\layouts\header.php';
 ?>
 
-<main>
+<main class="content">
     <section>
         <div class="bannerNews">
             <div class="bannerNewsFilter">

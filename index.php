@@ -10,7 +10,7 @@
     try {
 
         $ControllerFront = new \Project\Controllers\ControllerFront(); // Objet Controller
-
+        
         if (isset($_GET['action'])){
             if ($_GET['action'] == 'contact'){
                 $ControllerFront->contactFront();
@@ -27,6 +27,26 @@
             else if ($_GET['action'] == 'article'){
                 $id = htmlspecialchars($_GET['id']);
                 $ControllerFront->articleFront($id);
+            }
+            else if ($_GET['action'] == 'inscription'){
+                $ControllerFront->inscriptionFront();
+            }
+            else if ($_GET['action'] == 'newUser'){
+                $ControllerFront->newUser();
+            }
+            else if ($_GET['action'] == 'login'){
+                $ControllerFront->loginFront();
+            }
+            else if ($_GET['action'] == 'loginUser'){
+                $pseudo = htmlspecialchars($_POST['pseudo']);
+                $password = htmlspecialchars($_POST['password']);
+                $ControllerFront->loginUser($pseudo, $password);
+            }
+            else if ($_GET['action'] == 'compte'){
+                $ControllerFront->compteFront();
+            }
+            else if ($_GET['action'] == 'cgu'){
+                $ControllerFront->cguFront();
             }
         }
         else {
