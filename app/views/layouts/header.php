@@ -21,23 +21,34 @@
                             </svg>
                         </label>
                         <ul id="topMenuActive">
-                            <li><a class="nav-item active" href="index.php">Home</a></li>
-                            <li><a class="nav-item" href="index.php?action=news">News</a></li>
-                            <li><a class="nav-item" href="index.php?action=team">Team</a></li>
-                            <li><a class="nav-item" href="index.php?action=about">About-Us</a></li>
-                            <li><a class="nav-item" href="index.php?action=contact">Contact</a></li>
+                            <li><a title="Page d'accueil" class="nav-item active" href="index.php">Home</a></li>
+                            <li><a title="Page des News" class="nav-item" href="index.php?action=news">News</a></li>
+                            <li><a title="Page de la Team" class="nav-item" href="index.php?action=team">Team</a></li>
+                            <li><a title="A propos de nous" class="nav-item" href="index.php?action=about">About-Us</a></li>
+                            <li><a title="Page de Contact" class="nav-item" href="index.php?action=contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
                 <!-- Intégration du logo -->
-                <a href="index.php"><img src="app/public/images/panda-logo.png" alt="Logo Panda" title="Logo Panda"></a>
+                <a title="Page d'accueil" href="index.php"><img src="app/public/images/panda-logo.png" alt="Logo Panda" title="Logo Panda"></a>
                 <!-- Création du menu de droite -->
                 <div class="login">
                     <nav class="topMenuRight">
                         <ul>
-                            <li><a class="nav-item" href="index.php?action=login">Login</a></li>
-                            <li><a class="nav-item" href="index.php?action=inscription">Inscription</a></li>
-                            <li><a class="nav-item" href="#">Admin</a></li>
+                            <?php
+                            if (isset($_SESSION['user'])) :
+                            ?>
+                            <li><a title="Déconnexion espace membre" class="nav-item" href="index.php?action=deconnexion">Déconnexion</a></li>
+                            <li><a title="Page compte membre" class="nav-item" href="index.php?action=compte">Mon-Compte</a></li>
+                            <?php
+                            else :
+                            ?>
+                            <li><a title="Connexion espace membre" class="nav-item" href="index.php?action=login">Login</a></li>
+                            <li><a title="Inscription espace membre" class="nav-item" href="index.php?action=inscription">Inscription</a></li>
+                            <?php
+                            endif
+                            ?>
+                            <li><a title="Connexion Administration du site" class="nav-item" href="admin">Admin</a></li>
                         </ul>
                     </nav>
                 </div>

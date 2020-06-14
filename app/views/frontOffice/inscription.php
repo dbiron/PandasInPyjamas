@@ -10,19 +10,11 @@ include 'app\views\layouts\header.php';
             <?php if(isset($errors)) :
                 if($errors) : 
                 foreach($errors as $error) : ?>
-                <div>
-                    <div>
-                        <div><?= $error ?></div>
-                    </div>
-                </div>
+                    <div class="erreur"><?= $error ?></div>
                 <?php
                 endforeach; 
                 else : ?>
-                <div>
-                    <div>
-                        <div>Confirmation de votre Inscription !</div>
-                    </div>
-                </div>
+                    <div class="validation">Confirmation de votre Inscription !</div>
             <?php endif; endif ?>
             <div class="inscriptionInput">
                 <input type="text" name="pseudo" placeholder="Pseudo *" value="<?php if(isset($_POST['pseudo'])) echo($_POST['pseudo']) ?>">

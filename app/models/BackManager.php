@@ -8,21 +8,43 @@ class BackManager extends Manager{
     function post_article(){
         // Connexion à la DB
         $bdd = $this -> dbConnect();
-        // Extraction des POST
+        // Gestion des Erreurs
         extract($_POST);
-        // Gestion de l'upload pour l'image 
-        // Et relocalisation de cette dernière dans le dossier Images
-        $image = basename($_FILES['file']['name']);
-        move_uploaded_file($_FILES['file']['tmp_name'], 'app/public/images/'.$image);
-        // Préparation de la DB et Exécution
-        $post = $bdd->prepare('INSERT INTO articles(title, content, image) VALUES(:title, :content, :image)');
-        $post -> execute([
-            'title' => htmlentities($titre),
-            'content' => htmlentities($contenu),
-            'image' => htmlentities($image),  
-        ]);
-        unset($_POST['titre']);
-        unset($_POST['contenu']);
+        $validation = true;
+        $errors = [];
+        // On vérifie que tous les champs sont remplis
+        if (empty($titre)) {
+            $validation = false;
+            $errors[] = 'Un titre est requis';
+        }
+        if (empty($contenu)) {
+            $validation = false;
+            $errors[] = 'Un contenu est requis';
+        }
+        if(!isset($_FILES['file']) || $_FILES['file']['error'] > 0){
+            $validation = false;
+            $errors[]= 'Vous n\'avez pas mis d\'image';
+        }
+        if ($validation) {
+            // Gestion de l'upload pour l'image
+            // Et relocalisation de cette dernière dans le dossier Images
+            $image = $_FILES['file']['tmp_name'];
+            if (in_array($image, array('jpeg', 'jpg', 'png'))) {
+                move_uploaded_file($_FILES['file']['tmp_name'], 'app/public/images/'.$image);
+            } else {
+                $errors[] = 'Votre image doit être en JPG, JPEG ou PNG';
+            }
+            // Préparation de la DB et Exécution
+            $post = $bdd->prepare('INSERT INTO articles(title, content, image) VALUES(:title, :content, :image)');
+            $post -> execute([
+                'title' => htmlentities($titre),
+                'content' => htmlentities($contenu),
+                'image' => htmlentities($image),
+            ]);
+            unset($_POST['titre']);
+            unset($_POST['contenu']);
+        }
+        return $errors;
     }    
 
     // ++++++++++ Fonction de modification d'un article ++++++++++ //

@@ -17,9 +17,11 @@ class ControllerBack {
 
     // ++++++++++ Fonction permettant de gérer l'ajout d'un nouvel article ++++++++++ //
     function createArticle(){
+
         $postArticles = new \Project\Models\BackManager();
-        $postArticles->post_article();
-        header ('Location: admin.php?action=panelAdmin');
+        $errors = $postArticles->post_article();
+        require 'app/views/backOffice/newArticle.php';
+        // header ('Location: admin.php?action=panelAdmin');
     }
 
     // ++++++++++ Fonction permettant de gérer la page EditArticle ++++++++++ //

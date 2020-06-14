@@ -15,6 +15,9 @@
             if ($_GET['action'] == 'contact'){
                 $ControllerFront->contactFront();
             }
+            else if ($_GET['action'] == 'contactMail'){
+                $ControllerFront->contactMail();
+            }
             else if ($_GET['action'] == 'news'){
                 $ControllerFront->newsFront();
             }
@@ -27,6 +30,9 @@
             else if ($_GET['action'] == 'article'){
                 $id = htmlspecialchars($_GET['id']);
                 $ControllerFront->articleFront($id);
+            }
+            else if ($_GET['action'] == 'postComment'){
+                $ControllerFront->postComment();
             }
             else if ($_GET['action'] == 'inscription'){
                 $ControllerFront->inscriptionFront();
@@ -45,8 +51,14 @@
             else if ($_GET['action'] == 'compte'){
                 $ControllerFront->compteFront();
             }
+            else if ($_GET['action'] == 'deconnexion'){
+                $ControllerFront->deconnexion();
+            }
             else if ($_GET['action'] == 'cgu'){
                 $ControllerFront->cguFront();
+            }
+            else if ($_GET['action'] == 'legalm'){
+                $ControllerFront->legalmFront();
             }
         }
         else {
@@ -54,6 +66,6 @@
         }
 
     } catch (Exception $e){
-
+        require 'app/views/frontOffice/page-404.php';
     }
 ?>

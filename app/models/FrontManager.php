@@ -92,8 +92,6 @@ class FrontManager extends Manager{
     function login($pseudo, $password){
         // Connexion à la DB
         $bdd = $this -> dbConnect();
-        // Extraction des POST
-        // extract($_POST);
         // Gestion des Erreurs
         $validation = true;
         $errors = [];
@@ -118,6 +116,104 @@ class FrontManager extends Manager{
         else
         {
             $errors[] = 'Cela ne correspond à aucun compte actif';
+        }
+        return $errors;
+    }
+
+    // ++++++++++ Fonction permettant de se deconnecter du compte utilisateur ++++++++++ //
+    function logout(){
+        unset($_SESSION['user']);
+        session_destroy();
+    }
+
+    // ++++++++++ Fonction permettant d'obtenir et d'afficher les infos d'un utilisateur ++++++++++ //
+    function info(){
+        // Connexion à la DB
+        $bdd = $this -> dbConnect();
+        // Préparation de la DB et exécution
+        $info = $bdd->prepare('SELECT mail, pseudo FROM users WHERE id=?');
+        $info->execute([$_SESSION['user']]);
+        $info = $info->fetch();
+        return $info;
+    }
+
+    // ++++++++++ Fonction permettant d'obtenir et d'afficher les commentaires d'un utilisateur ++++++++++ //
+    function commentsUser(){
+        // Connexion à la DB
+        $bdd = $this -> dbConnect();
+        // Préparation de la DB et exécution
+        $comments = $bdd->prepare('SELECT comments.*, articles.title FROM comments INNER JOIN articles ON comments.article_id = articles.id AND comments.user_id = ? ');
+        $comments->execute([$_SESSION['user']]);
+        $comments = $comments->fetchAll();
+        return $comments;
+    }
+
+    // ++++++++++ Fonction permettant d'obtenir et d'afficher les commentaires liés à un article ++++++++++ //
+    function commentsArticle($id){
+        // Connexion à la DB
+        $bdd = $this -> dbConnect();
+        // Préparation de la DB et exécution
+        $comments = $bdd->prepare('SELECT comments.*, users.pseudo FROM comments INNER JOIN users ON comments.user_id = users.id WHERE article_id=? ORDER BY created_at DESC');
+        $comments->execute(array($id));
+        return $comments;
+    }
+
+    // ++++++++++ Fonction permettant de créer un commentaire lié à un article ++++++++++ //
+    function postUserComment(){
+        if (isset($_SESSION['user'])) {
+            // Connexion à la DB
+            $bdd = $this -> dbConnect();
+            extract($_POST);
+            // Gestion des Erreurs
+            $validation = true;
+            $errors = [];
+            if (empty($commentaire)) {
+                $validation = false;
+                $errors[] = 'Vous devez mettre un commentaire avant de poster !!!';
+            }
+            if ($validation) {
+                $comments = $bdd->prepare('INSERT INTO comments(user_id, article_id, content) VALUES(:user_id, :article_id, :content)');
+                $comments->execute([
+                    'user_id' => $_SESSION['user'],
+                    'article_id' => $id_article,
+                    'content' => nl2br(htmlentities($commentaire)),
+                ]);
+            }
+            return $errors;
+        }
+    }
+
+    // ++++++++++ Fonction permettant d'envoyer un mail via le formulaire de contact ++++++++++ //
+    function contactMail(){
+        extract($_POST);
+        // Gestion des Erreurs
+        $validation = true;
+        $errors = [];
+        if(empty($nom) || empty($prenom) || empty($email) || empty($sujet) || empty($texte)){
+            $validation = false;
+            $errors[] = 'Tous les Champs sont OBLIGATOIRES !!!';
+        }
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $validation = false;
+            $errors[] = 'L\'Adresse Mail n\'est pas Valide !!!';
+        }
+        if($validation){
+            $to = 'sfu1982@gmail.com';
+            $from = 'Nouveau Message de : ' . $nom;
+            $message = '
+                <h1> Sujet du message : ' . $sujet .'</h1>
+                <h2> Nouveau Message de : ' . $nom .' ' . $prenom .'</h2>
+                <h2> Adresse E-Mail : ' . $email .'</h2>
+                <p>'. nl2br($texte) . '</p>';
+                $headers = 'From' . $nom . ' ' . $prenom .' < ' . $email . ' > ' . "\r\n";
+                $headers = 'MIME-Version: 1.0' . "\r\n";
+                $headers = 'Content-type: text/html; charset=utf-8' . "\r\n";
+                mail($to, $from, $message, $headers);
+                unset($_POST['nom']);
+                unset($_POST['prenom']);
+                unset($_POST['email']);
+                unset($_POST['sujet']);
+                unset($_POST['texte']);   
         }
         return $errors;
     }

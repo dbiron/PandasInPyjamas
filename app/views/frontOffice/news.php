@@ -17,7 +17,7 @@ include 'app\views\layouts\header.php';
         <article class="articleContent">
             <figure class="articleImage"><img src="app/public/images/<?= $article['image'] ?>"></figure>
             <div class="articleInnerContent">
-                <h2><a href="index.php?action=article&id=<?= $article['id']?>"><?= $article['title'] ?></a></h2>
+                <h2><a title="Cliquez pour voir l'article" href="index.php?action=article&id=<?= $article['id']?>"><?= $article['title'] ?></a></h2>
             </div>
         </article>
     <?php endwhile; ?>

@@ -10,11 +10,7 @@ include 'app\views\layouts\header.php';
             <?php if(isset($errors)) :
                 if($errors) : 
                 foreach($errors as $error) :  ?>
-                <div>
-                    <div>
-                        <div><?= $error ?></div>
-                    </div>
-                </div>
+                    <div class="erreur"><?= $error ?></div>
             <?php
             endforeach; 
             endif;

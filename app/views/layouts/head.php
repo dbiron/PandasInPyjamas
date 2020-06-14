@@ -31,6 +31,9 @@
         <link rel="stylesheet" href="app/public/css/editArticle.css">
         <link rel="stylesheet" href="app/public/css/inscription.css">
         <link rel="stylesheet" href="app/public/css/cgu.css">
+        <link rel="stylesheet" href="app/public/css/legalm.css">
+        <link rel="stylesheet" href="app/public/css/article.css">
+        <link rel="stylesheet" href="app/public/css/compte.css">
         <link rel="stylesheet" href="app/public/css/buttonEffect.css">
         <link rel="stylesheet" href="app/public/css/mediaqueries.css">
         <!---------- Title en dynamique ---------->

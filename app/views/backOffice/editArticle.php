@@ -8,7 +8,7 @@ include 'app\views\layouts\header.php';
         <?php while($article = $articles->fetch()): ?>
             <div class="editArticleList">
                 <h2><?= $article['title'] ?></h2>
-                <a href="admin.php?action=updateArticle&id=<?= $article['id']?>">Modifier la news</a><a href="admin.php?action=deleteArticle&id=<?= $article['id']?>">Supprimer la news</a>
+                <a title="Modification d'une News" href="admin.php?action=updateArticle&id=<?= $article['id']?>">Modifier la news</a><a href="admin.php?action=deleteArticle&id=<?= $article['id']?>">Supprimer la news</a>
             </div>
         <?php endwhile; ?>
     </section>

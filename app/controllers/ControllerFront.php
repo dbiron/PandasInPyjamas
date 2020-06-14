@@ -20,6 +20,13 @@ class ControllerFront {
         require 'app/views/frontOffice/contact.php';
     }
 
+    // ++++++++++ Fonction permettant d'envoyer un Mail via la page contact ++++++++++ //
+    function contactMail(){
+        $contactMail = new \Project\Models\FrontManager();
+        $errors = $contactMail->contactMail();
+        require 'app/views/frontOffice/contact.php';
+    }
+
     // ++++++++++ Fonction permettant de gérer la page News ++++++++++ //
     function newsFront(){
         $homeArticles = new \Project\Models\FrontManager();
@@ -49,7 +56,9 @@ class ControllerFront {
     // ++++++++++ Fonction permettant de gérer la page Article ++++++++++ //
     function articleFront($id){
         $homeArticle = new \Project\Models\FrontManager();
+        $commentArticle = new \Project\Models\FrontManager();
         $article = $homeArticle->viewArticle($id);
+        $comments = $commentArticle->commentsArticle($id);
         $title ='PIP - Article de la Team';
         $description ='PIP - Page pour voir un article souhaité ';
         $keywords = 'ESport, Team, Jeux-Vidéo, Game, Counter-Strike, Article';
@@ -91,12 +100,23 @@ class ControllerFront {
         }
     }
 
+    // ++++++++++ Fonction permettant de se deconnecter ++++++++++ //
+    function deconnexion(){
+        $logoutUser = new \Project\Models\FrontManager();
+        $logout = $logoutUser->logout();
+        header ('Location: index.php?action=compte');
+    }
+
     // ++++++++++ Fonction permettant de gérer la page du compte user ++++++++++ //
     function compteFront(){
         if ($_SESSION['user']) {
+            $infoUser = new \Project\Models\FrontManager();
+            $info = $infoUser->info();
+            $comments = $infoUser->commentsUser();
             $title ='PIP - CGU';
             $description ='PIP - Page compte user du site de la team';
             $keywords = 'ESport, Team, Jeux-Vidéo, Game, Counter-Strike, user';
+
             require 'app/views/frontOffice/compte.php';
         }
         else
@@ -105,12 +125,38 @@ class ControllerFront {
             header ('Location: index.php?action=news');
         }
     }
-    
+
+    // ++++++++++ Fonction permettant de poster un commentaire ++++++++++ //
+    function postComment(){
+        extract($_POST);
+        $postComment = new \Project\Models\FrontManager();
+        $errors = $postComment->postUserComment();
+        if (isset($errors)){
+            $article = $postComment->viewArticle($id_article);
+            $comments = $postComment->commentsArticle($id_article);
+            $title ='PIP - Article de la Team';
+            $description ='PIP - Page pour voir un article souhaité ';
+            $keywords = 'ESport, Team, Jeux-Vidéo, Game, Counter-Strike, Article';
+            require 'app/views/frontOffice/article.php';   
+        }
+        else{
+            header ('Location: index.php?action=article&id='.$id_article);   
+        }
+    }
+
     // ++++++++++ Fonction permettant de gérer la page CGU ++++++++++ //
     function cguFront(){
         $title ='PIP - CGU';
         $description ='PIP - Page des CGU du site de la team';
         $keywords = 'ESport, Team, Jeux-Vidéo, Game, Counter-Strike, CGU';
         require 'app/views/frontOffice/cgu.php';
+    }
+   
+    // ++++++++++ Fonction permettant de gérer la page Mentions Légales ++++++++++ //
+    function legalmFront(){
+        $title ='PIP - CGU';
+        $description ='PIP - Page des Mentions Légales du site de la team';
+        $keywords = 'ESport, Team, Jeux-Vidéo, Game, Counter-Strike, mentions légales';
+        require 'app/views/frontOffice/legalm.php';
     }
 }
