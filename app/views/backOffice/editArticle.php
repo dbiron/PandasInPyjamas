@@ -1,7 +1,7 @@
 <!---------- Appel du Head et du Header ---------->
 <?php
-include 'app\views\layouts\head.php';
-include 'app\views\layouts\header.php';
+include 'app/views/layouts/head.php';
+include 'app/views/layouts/header.php';
 ?>
 
 <main class="content">
@@ -31,4 +31,4 @@ include 'app\views\layouts\header.php';
 
 <!---------- Appel du Footer ---------->
 <?php
-include 'app\views\layouts\footer.php';
+include 'app/views/layouts/footer.php';
