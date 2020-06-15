@@ -1,3 +1,4 @@
+<!---------- Appel du Head et du Header ---------->
 <?php
 include 'app\views\layouts\head.php';
 include 'app\views\layouts\header.php';
@@ -5,12 +6,11 @@ include 'app\views\layouts\header.php';
 
 <main class="content">
     <!---------- Banner Contact ---------->
-    <section>
-        <div class="bannerContact">
-            <div class="bannerContactFilter">
-                <h1>CONTACT<br><span>Si vous voulez nous envoyer un petit message, c'est par ici que sa se passe</span></h1>
-            </div>
-        </div>    
+    <section class="banner">
+        <img src="app/public/images/map-museum.png">
+        <div class="bannerFilter">
+            <h1>CONTACT<br><span>Si vous voulez nous envoyer un petit message, c'est par ici que sa se passe</span></h1>
+        </div>   
     </section>
     <!---------- Contact Form ---------->
     <section id="contact">
@@ -40,5 +40,6 @@ include 'app\views\layouts\header.php';
     </section>
 </main>
 
+<!---------- Appel du Footer ---------->
 <?php
 include 'app\views\layouts\footer.php';

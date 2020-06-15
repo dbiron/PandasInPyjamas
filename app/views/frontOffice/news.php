@@ -1,15 +1,16 @@
+<!---------- Appel du Head et du Header ---------->
 <?php
 include 'app\views\layouts\head.php';
 include 'app\views\layouts\header.php';
 ?>
 
 <main class="content">
-    <section>
-        <div class="bannerNews">
-            <div class="bannerNewsFilter">
+    <!---------- Banner News ---------->
+    <section class="banner">
+        <img src="app/public/images/map-cache.png">
+            <div class="bannerFilter">
                 <h1>NEWS<br><span>Toutes les news à propos de la team se trouvent ici</span></h1>
-            </div>
-        </div>    
+            </div>  
     </section>
     <!---------- Section News ---------->
     <section class="article">
@@ -24,5 +25,6 @@ include 'app\views\layouts\header.php';
     </section>
 </main>
 
+<!---------- Appel du Footer ---------->
 <?php
 include 'app\views\layouts\footer.php';

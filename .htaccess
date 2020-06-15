@@ -1,13 +1,5 @@
 RewriteEngine On
 RewriteRule ^([a-zA-Z0-9\-\_\/])$ index.php?p=$1
-RewriteRule ^admin$ admin.php?action=panelAdmin
-
-<FilesMatch "admin">
-Authname "Espace administration"
-Authtype Basic
-AuthUserFile "C:\laragon\www\pip\app\views\backOffice\.htpasswd"
-Require valid-user
-</FilesMatch>
 
 # Redirection 404 
 ErrorDocument 404 /page-404.php

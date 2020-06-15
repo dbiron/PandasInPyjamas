@@ -12,7 +12,18 @@
         $ControllerBack = new \Project\Controllers\ControllerBack(); // Objet Controller
 
         if (isset($_GET['action'])){
-            if ($_GET['action'] == 'panelAdmin'){
+            if ($_GET['action'] == 'admin'){
+                $ControllerBack->loginBack();
+            }
+            else if ($_GET['action'] == 'loginAdmin'){
+                $pseudo = htmlspecialchars($_POST['pseudo']);
+                $password = htmlspecialchars($_POST['password']);
+                $ControllerBack->loginAdmin($pseudo, $password);
+            }
+            else if ($_GET['action'] == 'logout'){
+                $ControllerBack->logout();
+            }
+            else if ($_GET['action'] == 'panelAdmin'){
                 $ControllerBack->panelAdmin();
             }
             else if ($_GET['action'] == 'newArticle'){
@@ -39,6 +50,6 @@
         }
 
     } catch (Exception $e){
-
+        require 'app/views/frontOffice/page-404.php';
     }
 ?>

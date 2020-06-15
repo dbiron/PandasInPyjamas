@@ -1,3 +1,4 @@
+<!---------- Appel du Head et du Header ---------->
 <?php
 include 'app\views\layouts\head.php';
 include 'app\views\layouts\header.php';
@@ -30,5 +31,6 @@ include 'app\views\layouts\header.php';
     </section>
 </main>
 
+<!---------- Appel du Footer ---------->
 <?php
 include 'app\views\layouts\footer.php';

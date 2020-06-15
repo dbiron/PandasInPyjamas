@@ -1,3 +1,4 @@
+<!---------- Appel du Head et du Header ---------->
 <?php
 include 'app\views\layouts\head.php';
 include 'app\views\layouts\header.php';
@@ -5,12 +6,11 @@ include 'app\views\layouts\header.php';
 
 <main class="content">
     <!---------- Banner About-Us ---------->
-    <section>
-        <div class="bannerAbout">
-            <div class="bannerAboutFilter">
-                <h1>ABOUT-US<br><span>Pour tout connaitre sur l'histoire de la team, vous êtes au bon endroit</span></h1>
-            </div>
-        </div>    
+    <section class="banner">
+        <img src="app/public/images/map-mirage.png" alt="Banniere mirage about" title="Banniere mirage about">
+        <div class="bannerFilter">
+            <h1>ABOUT-US<br><span>Pour tout connaitre sur l'histoire de la team, vous êtes au bon endroit</span></h1>
+        </div>  
     </section>
     <!---------- Section About-Us ---------->
     <section class="about">
@@ -28,5 +28,6 @@ include 'app\views\layouts\header.php';
     </section>
 </main>
 
+<!---------- Appel du Footer ---------->
 <?php
 include 'app\views\layouts\footer.php';

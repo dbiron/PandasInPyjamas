@@ -1,3 +1,5 @@
+// Fonction qui se lance au chargement de la page et permettant l'apparition
+// d'une flèche pour remonter en haut de la page si on descend de trop
 $(document).ready(function() {
 
     // On verifie le click pour lancer l'animation de remonté en 'slow'

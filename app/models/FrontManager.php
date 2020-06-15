@@ -10,7 +10,7 @@ class FrontManager extends Manager{
         // Connexion à la DB
         $bdd = $this -> dbConnect();
         // Préparation de la DB et exécution
-        $req = $bdd->prepare ("SELECT id, title, content, image, created_at FROM articles ORDER BY created_at DESC");
+        $req = $bdd->prepare ("SELECT id, title, content, image, created_at FROM articles ORDER BY created_at DESC LIMIT 3");
         $req->execute(array());
         return $req;
     }

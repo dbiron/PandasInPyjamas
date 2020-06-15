@@ -1,9 +1,11 @@
+<!---------- Appel du Head et du Header ---------->
 <?php
 include 'app\views\layouts\head.php';
 include 'app\views\layouts\header.php';
 ?>
 
 <main class="content">
+    <!---------- Section Panel Admin ---------->
     <section id="admin">
         <h1>Panneau D'Administration</h1>
         <article class="adminBloc">
@@ -29,5 +31,6 @@ include 'app\views\layouts\header.php';
     </section>
 </main>
 
+<!---------- Appel du Footer ---------->
 <?php
 include 'app\views\layouts\footer.php';

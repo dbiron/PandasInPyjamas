@@ -116,7 +116,6 @@ class ControllerFront {
             $title ='PIP - CGU';
             $description ='PIP - Page compte user du site de la team';
             $keywords = 'ESport, Team, Jeux-Vidéo, Game, Counter-Strike, user';
-
             require 'app/views/frontOffice/compte.php';
         }
         else
@@ -154,7 +153,7 @@ class ControllerFront {
    
     // ++++++++++ Fonction permettant de gérer la page Mentions Légales ++++++++++ //
     function legalmFront(){
-        $title ='PIP - CGU';
+        $title ='PIP - Mention Légales';
         $description ='PIP - Page des Mentions Légales du site de la team';
         $keywords = 'ESport, Team, Jeux-Vidéo, Game, Counter-Strike, mentions légales';
         require 'app/views/frontOffice/legalm.php';

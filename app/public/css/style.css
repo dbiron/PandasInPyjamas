@@ -1,28 +1,24 @@
 /* ------------------------------------------------------------ */
 /* ---------------------- 1.) CSS GENERAL --------------------- */
 /* ---------------------- 2.) CSS HEADER ---------------------- */
-/* ------------------- 3.) CSS BANNER HOME -------------------- */
+/* ---------------------- 3.) CSS BANNER ---------------------- */
 /* ----------------------- 4.) CSS NEWS ----------------------- */
-/* ----------------- 5.) CSS BANNER ABOUT US ------------------ */
-/* --------------------- 6.) CSS ABOUT US --------------------- */
-/* --------------------- 7.) CSS ARTICLE ---------------------- */
-/* ------------------------ 8.) CSS CGU ----------------------- */
-/* ---------------------- 9.) CSS COMPTE ---------------------- */
-/* ------------------ 10.) CSS BANNER CONTACT ----------------- */
-/* --------------------- 11.) CSS CONTACT --------------------- */
-/* ------------------- 12.) CSS EDIT ARTICLE ------------------ */
-/* ------------------- 13.) CSS INSCRIPTION ------------------- */
-/* ----------------- 14.) CSS MENTIONS LEGALES ---------------- */
-/* ---------------------- 15.) CSS LOGIN ---------------------- */
-/* -------------------- 16.) CSS NEWARTICLE ------------------- */
-/* ------------------- 17.) CSS BANNER NEWS ------------------- */
-/* ---------------------- 18.) CSS NEWS ----------------------- */
-/* -------------------- 19.) CSS PANEL ADMIN ------------------ */
-/* ------------------- 20.) CSS BANNER TEAM ------------------- */
-/* ---------------------- 21.) CSS TEAM ----------------------- */
-/* ---------------------- 22.) CSS FOOTER --------------------- */
-/* ------------------ 23.) CSS EFFET BOUTTON ------------------ */
-/* ------------------- 24.) CSS MEDIAQUERIES ------------------ */
+/* --------------------- 5.) CSS ABOUT US --------------------- */
+/* --------------------- 6.) CSS ARTICLE ---------------------- */
+/* ------------------------ 7.) CSS CGU ----------------------- */
+/* ---------------------- 8.) CSS COMPTE ---------------------- */
+/* --------------------- 9.) CSS CONTACT ---------------------- */
+/* ------------------- 10.) CSS EDIT ARTICLE ------------------ */
+/* ------------------- 11.) CSS INSCRIPTION ------------------- */
+/* ----------------- 12.) CSS MENTIONS LEGALES ---------------- */
+/* ---------------------- 13.) CSS LOGIN ---------------------- */
+/* -------------------- 14.) CSS NEWARTICLE ------------------- */
+/* ---------------------- 15.) CSS NEWS ----------------------- */
+/* -------------------- 16.) CSS PANEL ADMIN ------------------ */
+/* ---------------------- 17.) CSS TEAM ----------------------- */
+/* ---------------------- 18.) CSS FOOTER --------------------- */
+/* ------------------ 19.) CSS EFFET BOUTTON ------------------ */
+/* ------------------- 20.) CSS MEDIAQUERIES ------------------ */
 /* ------------------------------------------------------------ */
 
 /* ----------------------------------------------------------- */
@@ -121,6 +117,7 @@ h3{
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
+    z-index: 9999;
 }
   
 /* Mise en forme du menu */
@@ -156,25 +153,25 @@ h3{
 }
 
 /* ----------------------------------------------------------- */
-/* ------------------- 3.) CSS BANNER HOME ------------------- */
+/* ---------------------- 3.) CSS BANNER --------------------- */
 /* ----------------------------------------------------------- */
 
 /* Mise en place de la banniere */
-.bannerHome{
-    margin: 0 auto;
-    width: 1200px;
-    height: 500px;  
-    background-image: url(../images/banner.png);
+.banner{
+    width: 100%;
+    position: relative;
 }
-/* Mise en place de la banniere Filtre*/
-.bannerHomeFilter{
-    margin: 0 auto;
-    width: 1200px;
-    height: 500px;  
+/* Mise en place de la banniere Filtre */
+.bannerFilter{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: table;
     background-color: rgba(11, 16, 19, 0.555);
 }
-.bannerHomeFilter h1{
+.bannerFilter h1{
     color: white;
     font-size: 40px;
     font-weight: 700;
@@ -182,7 +179,7 @@ h3{
     display: table-cell;
     vertical-align: middle;
 }
-.bannerHomeFilter span{
+.bannerFilter span{
     font-size: 20px;
     display: block;
 }
@@ -255,8 +252,6 @@ h3{
     overflow: hidden;
 }
 .newsInnerContent h2{
-    /* font-size: 30px; */
-    /* color: white; */
     padding: 15px 0;
     word-wrap: break-word;
 }
@@ -273,88 +268,16 @@ h3{
     color: rgba(180, 199, 201, 0.40);
 }
 .newsFooter{
-    display: table;
     width: 100%;
     border-top: 1px solid #9da9b4;
 }
-.newsAuthor, .newsLike{
-    width: 50%;
-    display: table-cell;
-}
-.newsAuthor{
-    text-align: left;
-    padding: 15px;
-    height: auto;
-}
-.newsLike{
-    text-align: right;
-    padding: 15px;
-}
-.newsAuthor h3{
-    font-size: 10px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #c9c9c9;
-    display: inline;
-    vertical-align: middle;
-}
-.newsAuthor img{
-    vertical-align: middle;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
-.newsLike i{
-    display: inline-block;
-    vertical-align: middle;
-    color: #c9c9c9;
-}
-.newsLike p{
-    font-size: 10px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #c9c9c9;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* ----------------------------------------------------------- */
-/* ----------------- 5.) CSS BANNER ABOUT US ----------------- */
-/* ----------------------------------------------------------- */
-
-/* Mise en place de la banniere */
-.bannerAbout{
-    margin: 0 auto;
-    width: 1200px;
-    height: 500px;  
-    background-image: url(../images/map-mirage.png);
-}
-/* Mise en place de la banniere Filtre*/
-.bannerAboutFilter{
-    margin: 0 auto;
-    width: 1200px;
-    height: 500px;  
-    display: table;
-    background-color: rgba(11, 16, 19, 0.555);
-}
-.bannerAboutFilter h1{
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
+.newsFooter a{
+    display: block;
     text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+    padding: 15px 0;
 }
-.bannerAboutFilter span{
-    font-size: 20px;
-}
-
 /* ----------------------------------------------------------- */
-/* --------------------- 6.) CSS ABOUT US -------------------- */
+/* --------------------- 5.) CSS ABOUT US -------------------- */
 /* ----------------------------------------------------------- */
 
 .about{
@@ -373,7 +296,7 @@ h3{
 }
 
 /* ----------------------------------------------------------- */
-/* --------------------- 7.) CSS ARTICLE --------------------- */
+/* --------------------- 6.) CSS ARTICLE --------------------- */
 /* ----------------------------------------------------------- */
 
 .article{
@@ -433,7 +356,7 @@ h3{
 }
 
 /* ----------------------------------------------------------- */
-/* ------------------------ 8.) CSS CGU ---------------------- */
+/* ------------------------ 7.) CSS CGU ---------------------- */
 /* ----------------------------------------------------------- */
 
 .cgu{
@@ -455,7 +378,7 @@ h3{
 }
 
 /* ----------------------------------------------------------- */
-/* ---------------------- 9.) CSS COMPTE --------------------- */
+/* ---------------------- 8.) CSS COMPTE --------------------- */
 /* ----------------------------------------------------------- */
 
 .compte{
@@ -481,36 +404,7 @@ h3{
 }
 
 /* ------------------------------------------------------------ */
-/* ------------------ 10.) CSS BANNER CONTACT ----------------- */
-/* ------------------------------------------------------------ */
-
-/* Mise en place de la banniere */
-.bannerContact{
-    margin: 0 auto;
-    width: 1200px;
-    height: 500px;  
-    background-image: url(../images/map-museum.png);
-}
-/* Mise en place de la banniere Filtre*/
-.bannerContactFilter{
-    margin: 0 auto;
-    width: 1200px;
-    height: 500px;  
-    display: table;
-    background-color: rgba(11, 16, 19, 0.555);
-}
-.bannerContactFilter h1{
-    font-weight: 700;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-}
-.bannerContactFilter span{
-    font-size: 20px;
-}
-
-/* ------------------------------------------------------------ */
-/* --------------------- 11.) CSS CONTACT --------------------- */
+/* ---------------------- 9.) CSS CONTACT --------------------- */
 /* ------------------------------------------------------------ */
 
 #contact{
@@ -567,7 +461,7 @@ h3{
 }
 
 /* ------------------------------------------------------------ */
-/* ------------------- 12.) CSS EDIT ARTICLE ------------------ */
+/* ------------------- 10.) CSS EDIT ARTICLE ------------------ */
 /* ------------------------------------------------------------ */
 
 #editArticle{
@@ -583,22 +477,82 @@ h3{
 .editArticleList:first-child{
     border: none;
     padding-top: 0;
+    margin-bottom: 15px;
 }
 .editArticleList:last-child{
     padding-bottom: 0;
 }
 .editArticleList a{
-    text-decoration: none;
     color: #9da9b4;
     display: table-cell;
     vertical-align: middle;
 }
+.editArticleList a:hover{
+    color: #79AD09;
+}
+.edit{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
 .editArticleList h2{
     display: table-cell;
 }
+/* Modal Validation "Supprimer Article */
+#validationDelete h2{
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+    color: red;
+    border-bottom: #22282D solid 2px;
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+/* Modal croix de fermeture */
+.close {
+    color: #9da9b4;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: white;
+}
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #9da9b4;
+    width: 50%;
+}
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #22282D;
+    color: white;
+    text-align: center;
+} 
 
 /* ------------------------------------------------------------ */
-/* ------------------- 13.) CSS INSCRIPTION ------------------- */
+/* ------------------- 11.) CSS INSCRIPTION ------------------- */
 /* ------------------------------------------------------------ */
 
 #inscription{
@@ -643,7 +597,7 @@ h3{
 }
 
 /* ------------------------------------------------------------ */
-/* ----------------- 14.) CSS MENTIONS LEGALES ---------------- */
+/* ----------------- 12.) CSS MENTIONS LEGALES ---------------- */
 /* ------------------------------------------------------------ */
 
 .legalm{
@@ -665,10 +619,10 @@ h3{
 }
 
 /* ------------------------------------------------------------ */
-/* ---------------------- 15.) CSS LOGIN ---------------------- */
+/* ---------------------- 13.) CSS LOGIN ---------------------- */
 /* ------------------------------------------------------------ */
 
-#login{
+#login, #loginAdmin{
     padding-top: 50px;
 }
 .loginInput ::placeholder{
@@ -710,7 +664,7 @@ h3{
 }
 
 /* ------------------------------------------------------------ */
-/* -------------------- 16.) CSS NEWARTICLE ------------------- */
+/* -------------------- 14.) CSS NEWARTICLE ------------------- */
 /* ------------------------------------------------------------ */
 
 #newArticle{
@@ -768,38 +722,7 @@ h3{
 }
 
 /* ------------------------------------------------------------ */
-/* ------------------- 17.) CSS BANNER NEWS ------------------- */
-/* ------------------------------------------------------------ */
-
-/* Mise en place de la banniere */
-.bannerNews{
-    margin: 0 auto;
-    width: 1200px;
-    height: 500px;  
-    background-image: url(../images/map-cache.png);
-}
-/* Mise en place de la banniere Filtre*/
-.bannerNewsFilter{
-    margin: 0 auto;
-    width: 1200px;
-    height: 500px;  
-    display: table;
-    background-color: rgba(11, 16, 19, 0.555);
-}
-.bannerNewsFilter h1{
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-}
-.bannerNewsFilter span{
-    font-size: 20px;
-}
-
-/* ------------------------------------------------------------ */
-/* ---------------------- 18.) CSS NEWS ----------------------- */
+/* ---------------------- 15.) CSS NEWS ----------------------- */
 /* ------------------------------------------------------------ */
 
 .article{
@@ -834,7 +757,7 @@ h3{
 }
 
 /* ------------------------------------------------------------ */
-/* -------------------- 19.) CSS PANEL ADMIN ------------------ */
+/* -------------------- 16.) CSS PANEL ADMIN ------------------ */
 /* ------------------------------------------------------------ */
 
 /* Mise en place des 2 Blocs */
@@ -884,38 +807,7 @@ h3{
 }
 
 /* ------------------------------------------------------------ */
-/* ------------------- 20.) CSS BANNER TEAM ------------------- */
-/* ------------------------------------------------------------ */
-
-/* Mise en place de la banniere */
-.bannerTeam{
-    margin: 0 auto;
-    width: 1200px;
-    height: 500px;  
-    background-image: url(../images/map-dust2.png);
-}
-/* Mise en place de la banniere Filtre*/
-.bannerTeamFilter{
-    margin: 0 auto;
-    width: 1200px;
-    height: 500px;  
-    display: table;
-    background-color: rgba(11, 16, 19, 0.555);
-}
-.bannerTeamFilter h1{
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-}
-.bannerTeamFilter span{
-    font-size: 20px;
-}
-
-/* ------------------------------------------------------------ */
-/* ---------------------- 21.) CSS TEAM ----------------------- */
+/* ---------------------- 17.) CSS TEAM ----------------------- */
 /* ------------------------------------------------------------ */
 
 #team{
@@ -985,7 +877,7 @@ h3{
 }
 
 /* ------------------------------------------------------------ */
-/* ---------------------- 22.) CSS FOOTER --------------------- */
+/* ---------------------- 18.) CSS FOOTER --------------------- */
 /* ------------------------------------------------------------ */
 
 /* Mise en place structure + couleur de fond de la barre du footer */
@@ -1036,7 +928,7 @@ h3{
 }
 
 /* ------------------------------------------------------------ */
-/* ------------------ 23.) CSS EFFET BOUTTON ------------------ */
+/* ------------------ 19.) CSS EFFET BOUTTON ------------------ */
 /* ------------------------------------------------------------ */
 
 .buttonEffect {
@@ -1047,6 +939,7 @@ h3{
     -webkit-transition-property: transform;
     transition-property: transform;
 }
+
 .buttonEffect:hover, .buttonEffect:focus, .buttonEffect:active {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
@@ -1063,11 +956,13 @@ h3{
     width:100%;
     z-index:99999;
 }
+
 /* ------------------------------------------------------------ */
-/* ------------------- 24.) CSS MEDIAQUERIES ------------------ */
+/* ------------------- 20.) CSS MEDIAQUERIES ------------------ */
 /* ------------------------------------------------------------ */
 
-@media screen and (max-width:576px) {
+/* Mediaqueries max->600px */
+@media screen and (max-width:600px){
     .content{
         width: 100%;
     }
@@ -1122,7 +1017,7 @@ h3{
     }
     
     /* Supression de la banner */
-    .bannerHome, .bannerNews, .bannerTeam, .bannerAbout, .bannerContact{
+    .banner{
         display: none;
     }
     /* Mise en place des News */
@@ -1143,6 +1038,10 @@ h3{
     }
     /* Mise en place de Login */
     .loginInput input, .loginButton input{
+        width: 90%;
+    }
+    /* Mise en place de la page Compte */
+    .compte{
         width: 90%;
     }
     /* Mise en place de Team */
@@ -1193,8 +1092,22 @@ h3{
     }
     /* ------------------------------------- Admin -----------------------------------*/
      /* Mise en place de newArticle */
-     .newArticleInput input, .newArticleTextarea textarea, .newArticleButton input{
+    .newArticleInput input, .newArticleTextarea textarea, .newArticleButton input{
         width: 90%;
+    }
+    /* Mise en place de EditArticle */
+    .editArticleList{
+        width: 90%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+    .edit{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .edit a{
+        width: 100%;
     }
     /* Mise en place du PanelAdmin */
     #admin{
@@ -1204,5 +1117,164 @@ h3{
     }
     .adminBloc{
         width: 100%;
+    }
+}
+
+/* Mediaqueries min->600px max->1024px */
+@media screen and (min-width:600px) and (max-width:1024px){
+    .content{
+        width: 100%;
+    }
+    .erreur{
+        width: 90%;
+    }
+    .validation{
+        width: 90%;
+    }
+    
+    /* Mise en place du Menu Burger */
+    .topContainer{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .login {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .mainMenu {
+        width: 100%;
+        min-height: 150px;
+        padding: 0;
+        text-align: center;
+    }
+    .topMenuLeft ul li {
+        display: block;
+        line-height: 20px;
+        font-size: 1.2rem;
+        padding: 2px 0;
+    }
+    .topMenuLeft ul {
+        display: none;
+        margin-bottom: 15px;
+    }
+    .topMenuLeft .menuMobile svg {
+        padding-top: 100px;
+        width: 40px;
+        height: 40px;
+    }
+    .topMenuLeft .menuMobile {
+        display: block;
+    }
+    .topMenuLeft #menuMobile:not(:checked),
+    #menuMobile:checked {
+        position: absolute;
+        left: -9999px;
+    }
+    .topMenuLeft [type="checkbox"]:checked+label+ul {
+        display: block;
+    }
+    
+    /* Supression de la banner */
+    .banner{
+        display: none;
+    }
+    /* Mise en place des News */
+    #news{
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .newsBloc{
+        width: 48%;
+    }
+    /* Mise en place de Contact */
+    .contactInput input, .contactTextarea textarea, .contactButton input{
+        width: 70%;
+    }
+    /* Mise en place de Inscription */
+    .inscriptionInput input, .inscriptionButton input{
+        width: 70%;
+    }
+    /* Mise en place de Login */
+    .loginInput input, .loginButton input{
+        width: 70%;
+    }
+    /* Mise en place de la page Compte */
+    .compte{
+        width: 70%;
+    }
+    /* Mise en place de Team */
+    .teamBloc{
+        display: flex;
+        flex-wrap: wrap;
+        width: 45%;
+        margin: 0 auto;
+    }
+    /* Mise en place des articles de la page News */
+    .article{
+        width: 70%;
+    }
+    .newCommentTextarea textarea, .newCommentButton input{
+        width: 70%;
+    }
+    /* Mise en place de la page About Us */
+    .about{
+        width: 70%;
+    }
+    /* Mise en place de la page CGU */
+    .cgu{
+        width: 70%;
+    }
+    /* Mise en place de la page Mention Légales */
+    .legalm{
+        width: 70%;
+    }
+    /* Mise en place du Footer */
+    /* ---- Footer Top ---- */
+    .botContainerUp{
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .botContainerUp a {
+        padding: 10px 0;
+        width: 30%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 16px;
+    }
+    /* ---- Footer Down ---- */
+    .botContainerDown {
+        width: 100%;
+    }
+    .botContainerDown span {
+        display: none;
+    }
+    /* ------------------------------------- Admin -----------------------------------*/
+     /* Mise en place de newArticle */
+    .newArticleInput input, .newArticleTextarea textarea, .newArticleButton input{
+        width: 70%;
+    }
+    /* Mise en place de EditArticle */
+    .editArticleList{
+        width: 90%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+    .edit{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .edit a{
+        width: 100%;
+    }
+    /* Mise en place du PanelAdmin */
+    #admin{
+        flex-wrap: wrap;
+        width: 90%;
+           margin: 0 auto;
+    }
+    .adminBloc{
+        width: 45%;
     }
 }

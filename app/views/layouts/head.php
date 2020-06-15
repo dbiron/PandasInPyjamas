@@ -16,26 +16,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
         <!---------- Appel du Favico ---------->
         <link rel="shortcut icon" type="image/ico" href="app\public\images\favico.ico"/>
+        <!---------- Appel de la feuille de style ---------->
         <link rel="stylesheet" href="app/public/css/style.css">
-        <link rel="stylesheet" href="app/public/css/header.css">
-        <link rel="stylesheet" href="app/public/css/about.css">
-        <link rel="stylesheet" href="app/public/css/team.css">
-        <link rel="stylesheet" href="app/public/css/news.css">
-        <link rel="stylesheet" href="app/public/css/home.css">
-        <link rel="stylesheet" href="app/public/css/contact.css">
-        <link rel="stylesheet" href="app/public/css/footer.css">
-        <link rel="stylesheet" href="app/public/css/contact.css">
-        <link rel="stylesheet" href="app/public/css/login.css">
-        <link rel="stylesheet" href="app/public/css/panelAdmin.css">
-        <link rel="stylesheet" href="app/public/css/newArticle.css">
-        <link rel="stylesheet" href="app/public/css/editArticle.css">
-        <link rel="stylesheet" href="app/public/css/inscription.css">
-        <link rel="stylesheet" href="app/public/css/cgu.css">
-        <link rel="stylesheet" href="app/public/css/legalm.css">
-        <link rel="stylesheet" href="app/public/css/article.css">
-        <link rel="stylesheet" href="app/public/css/compte.css">
-        <link rel="stylesheet" href="app/public/css/buttonEffect.css">
-        <link rel="stylesheet" href="app/public/css/mediaqueries.css">
         <!---------- Title en dynamique ---------->
         <title><?php if (isset($title)) {echo $title;} else {echo "Pandas in Pyjamas - Le site de la Team Esport";} ?></title>
     </head>

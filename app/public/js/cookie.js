@@ -6,7 +6,7 @@
 		document.body.innerHTML += '\
 		<div class="cookie">\
             <p>Notre site utilise des cookies.</p>\
-            <p>En poursuivant votre navigation sur notre site, vous en acceptez l’utilisation.</p> \
+            <p>En poursuivant votre navigation sur notre site, vous en acceptez l’utilisation.</p>\
             <a href="#">Je comprends</a>\
 		</div>\
         ';

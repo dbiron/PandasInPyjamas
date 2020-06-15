@@ -48,7 +48,17 @@
                             <?php
                             endif
                             ?>
-                            <li><a title="Connexion Administration du site" class="nav-item" href="admin">Admin</a></li>
+                            <?php
+                            if (isset($_SESSION['admin'])) :
+                            ?>
+                            <li><a title="Deconnexion Administration du site" class="nav-item" href="admin.php?action=logout">Admin-Logout</a></li>
+                            <?php
+                            else :
+                            ?>
+                            <li><a title="Connexion Administration du site" class="nav-item" href="admin.php?action=admin">Admin</a></li>
+                            <?php
+                            endif
+                            ?>
                         </ul>
                     </nav>
                 </div>

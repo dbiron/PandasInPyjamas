@@ -1,3 +1,4 @@
+<!---------- Appel du Head et du Header ---------->
 <?php
 include 'app\views\layouts\head.php';
 include 'app\views\layouts\header.php';
@@ -5,12 +6,11 @@ include 'app\views\layouts\header.php';
 
 <main class="content">
     <!---------- Banner Team ---------->
-    <section>
-        <div class="bannerTeam">
-            <div class="bannerTeamFilter">
+    <section class="banner">
+            <img src="app/public/images/map-dust2.png">
+            <div class="bannerFilter">
                 <h1>TEAM<br><span>Apprenez à connaitre nos joueurs et visionnez leurs stats en temps réel</span></h1>
-            </div>
-        </div>    
+            </div>  
     </section>
     <!---------- Section Team ---------->
     <section id="team">
@@ -430,6 +430,10 @@ include 'app\views\layouts\header.php';
         </article>
     </section>
 </main>
+
+<!---------- Appel du Script pour l'api gérant les stats des joueurs ---------->
 <script src="app/public/js/apiSteam.js"></script>
+
+<!---------- Appel du Footer ---------->
 <?php
 include 'app\views\layouts\footer.php';
