@@ -19,11 +19,13 @@ Les languages utilisés sont :
 * Javascript
 * JQuery
 * Php
+
 Le sujet :
+
 Le projet est un site présentant une équipe Esport évoluant sur le jeux "Counter-Strike Global Offensive".
 
 On pourra notemment retrouver : 
-* les news sur l'évolution de la team.
+* Les news sur l'évolution de la team.
 * Une page présentant les membres de la team avec une api qui permet d'afficher leurs stats sur ce jeux.
 * Une section membre qui permet de s'inscrire sur le site afin de commenter les différentes news.
 * Les liens vers les différents sponsors ainsi que vers les réseaux sociaux.
