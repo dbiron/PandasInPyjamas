@@ -21,7 +21,7 @@
                     </div>
                     <!---------- Intégration du copyright - CGU - Mention Légales ---------->
                     <div class="copyright">
-                        <p>&copy; Copyright 2020 Pandas in Pyjamas - <a title="Nos CGU" href="index.php?action=cgu">CGU</a> - <a title="Nos CGU" href="index.php?action=legalm">Mentions Légales</a> - <a title="Nos CGU" href="index.php?action=sitemap">Sitemap</a></p>
+                        <p>&copy; Copyright 2020 Pandas in Pyjamas - <a title="Nos CGU" href="index.php?action=cgu">CGU</a> - <a title="Nos CGU" href="index.php?action=legalm">Mentions Légales</a> - <a title="Site Map" href="sitemap.xml">Sitemap</a></p>
                     </div>
                 </div>
             </div>
