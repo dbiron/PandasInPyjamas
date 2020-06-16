@@ -164,6 +164,6 @@ class ControllerFront {
         $title ='PIP - Sitemap';
         $description ='PIP - Sitemap du site de la team';
         $keywords = 'ESport, Team, Jeux-Vidéo, Game, Counter-Strike, Sitemap';
-        require 'app/views/frontOffice/sitemap.xml';
+        require 'sitemap.xml';
     }
 }
