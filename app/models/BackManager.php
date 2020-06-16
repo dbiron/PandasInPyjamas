@@ -71,30 +71,33 @@ class BackManager extends Manager{
             $errors[] = 'Un contenu est requis';
         }
         if ($validation) {
-            // Gestion de l'upload pour l'image
-            // Autorisation de certains type de fichiers
-            $image = basename($_FILES["image"]["name"]);
-            $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));     
-            if($imageFileType = "jpg" && $imageFileType = "png" && $imageFileType = "jpeg") {
+            $image = $_FILES["image"]["name"];
+            $imageTmp = $_FILES["image"]["tmp_name"];
+            $extention = explode(".", $image);
+            $newExtention = strtolower(end($extention));
+            // Whiteliste des extentions autorisées
+            $tableau_ext = array("jpg", "png", "jpeg");
+    
+            if (in_array($newExtention, $tableau_ext)) {
                 // Relocalisation de l'image dans le dossier Images si le type est autorisé
-                move_uploaded_file($_FILES['image']['tmp_name'], 'app/public/images/'.$image);
+                $imageDestination = "app/public/images/".$image;
+                move_uploaded_file($imageTmp, $imageDestination);
                 // Préparation de la DB et Exécution
                 $post = $bdd->prepare('INSERT INTO articles(title, content, image) VALUES(:title, :content, :image)');
                 $post -> execute([
                     'title' => htmlentities($titre),
                     'content' => htmlentities($contenu),
                     'image' => htmlentities($image),
-                    ]);
-                    unset($_POST['titre']);
-                    unset($_POST['contenu']);
-                } 
-                else {
-                    $errors[] = 'Vous devez mettre une image en JPG, JPEG ou PNG';
+                ]);
+                unset($_POST['titre']);
+                unset($_POST['contenu']);
+            }
+            else{
+                $errors[] = 'Vous devez mettre une image en JPG, JPEG ou PNG';
             }
         }
         return $errors;
-    } 
-
+    }
     // ++++++++++ Fonction de modification d'un article ++++++++++ //
     // ++++++++++ Ceci récupère l'article à modifier via son ID ++++++++++ //
     function update($id){
