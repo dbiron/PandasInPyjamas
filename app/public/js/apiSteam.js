@@ -27,7 +27,7 @@
     
     .forEach(function (player) {
 
-    fetch(`http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=730&key=477F61C7E69CBEA6CB680DC7E036CA31&steamid=${player.id}`).then(function(response){
+    fetch(`https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=730&key=477F61C7E69CBEA6CB680DC7E036CA31&steamid=${player.id}`).then(function(response){
         return response.json()
     }).then(function (json){
 
