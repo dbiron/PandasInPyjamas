@@ -92,9 +92,6 @@ class BackManager extends Manager{
                 unset($_POST['titre']);
                 unset($_POST['contenu']);
             }
-            else{
-                $errors[] = 'Vous devez mettre une image en JPG, JPEG ou PNG';
-            }
         }
         return $errors;
     }
