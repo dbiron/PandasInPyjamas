@@ -76,7 +76,7 @@ class BackManager extends Manager{
         }
         if ($validation) {
             // Gestion de l'upload pour l'image
-            // Autorisation de certais type de fichiers
+            // Autorisation de certains type de fichiers
             $image = basename($_FILES["image"]["name"]);
             $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));     
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
@@ -98,7 +98,7 @@ class BackManager extends Manager{
         }
         return $errors;
     } 
-    
+
     // ++++++++++ Fonction de modification d'un article ++++++++++ //
     // ++++++++++ Ceci récupère l'article à modifier via son ID ++++++++++ //
     function update($id){

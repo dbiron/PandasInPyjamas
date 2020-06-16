@@ -9,7 +9,7 @@ include 'app/views/layouts/header.php';
     <section class="banner">
         <img src="app/public/images/map-museum.png">
         <div class="bannerFilter">
-            <h1>CONTACT<br><span>Si vous voulez nous envoyer un petit message, c'est par ici que sa se passe</span></h1>
+            <h1>CONTACT<br><span>Si vous voulez nous envoyer un petit message, c'est par ici que ça se passe</span></h1>
         </div>   
     </section>
     <!---------- Contact Form ---------->
