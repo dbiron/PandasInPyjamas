@@ -70,32 +70,35 @@ class BackManager extends Manager{
             $validation = false;
             $errors[] = 'Un contenu est requis';
         }
-        if(!isset($_FILES['file']) || $_FILES['file']['error'] > 0){
+        if(!isset($_FILES['image']) || $_FILES['image']['error'] > 0){
             $validation = false;
             $errors[]= 'Vous n\'avez pas mis d\'image';
         }
         if ($validation) {
             // Gestion de l'upload pour l'image
-            // Et relocalisation de cette dernière dans le dossier Images
-            $image = $_FILES['file']['tmp_name'];
-            if (in_array($image, array('jpeg', 'jpg', 'png'))) {
-                move_uploaded_file($_FILES['file']['tmp_name'], 'app/public/images/'.$image);
-            } else {
+            // Autorisation de certais type de fichiers
+            $image = basename($_FILES["image"]["name"]);
+            $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));     
+            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
                 $errors[] = 'Votre image doit être en JPG, JPEG ou PNG';
+            } 
+            else {
+                // Relocalisation de l'image dans le dossier Images si le type est autorisé
+                move_uploaded_file($_FILES['image']['tmp_name'], 'app/public/images/'.$image);
+                // Préparation de la DB et Exécution
+                $post = $bdd->prepare('INSERT INTO articles(title, content, image) VALUES(:title, :content, :image)');
+                $post -> execute([
+                    'title' => htmlentities($titre),
+                    'content' => htmlentities($contenu),
+                    'image' => htmlentities($image),
+                ]);
+                unset($_POST['titre']);
+                unset($_POST['contenu']);
             }
-            // Préparation de la DB et Exécution
-            $post = $bdd->prepare('INSERT INTO articles(title, content, image) VALUES(:title, :content, :image)');
-            $post -> execute([
-                'title' => htmlentities($titre),
-                'content' => htmlentities($contenu),
-                'image' => htmlentities($image),
-            ]);
-            unset($_POST['titre']);
-            unset($_POST['contenu']);
         }
         return $errors;
-    }    
-
+    } 
+    
     // ++++++++++ Fonction de modification d'un article ++++++++++ //
     // ++++++++++ Ceci récupère l'article à modifier via son ID ++++++++++ //
     function update($id){
