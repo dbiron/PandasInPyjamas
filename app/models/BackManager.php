@@ -71,29 +71,25 @@ class BackManager extends Manager{
             $errors[] = 'Un contenu est requis';
         }
         if ($validation) {
-            $image = $_FILES["image"]["name"];
-            $imageTmp = $_FILES["image"]["tmp_name"];
-            $extention = explode(".", $image);
-            $newExtention = strtolower(end($extention));
-            // Whiteliste des extentions autorisées
-            $tableau_ext = array("jpg", "png", "jpeg");
-    
-            if (!in_array($newExtention, $tableau_ext)) {
-                $errors[] = 'Vous devez mettre une image en JPG, JPEG ou PNG';
-            }
-            else{
+            // Gestion de l'upload pour l'image
+            // Autorisation de certains type de fichiers
+            $image = basename($_FILES["image"]["name"]);
+            $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));     
+            if($imageFileType = "jpg" && $imageFileType = "png" && $imageFileType = "jpeg") {
                 // Relocalisation de l'image dans le dossier Images si le type est autorisé
-                $imageDestination = "app/public/images/".$image;
-                move_uploaded_file($imageTmp, $imageDestination);
+                move_uploaded_file($_FILES['image']['tmp_name'], 'app/public/images/'.$image);
                 // Préparation de la DB et Exécution
                 $post = $bdd->prepare('INSERT INTO articles(title, content, image) VALUES(:title, :content, :image)');
                 $post -> execute([
                     'title' => htmlentities($titre),
                     'content' => htmlentities($contenu),
                     'image' => htmlentities($image),
-                ]);
-                unset($_POST['titre']);
-                unset($_POST['contenu']);
+                    ]);
+                    unset($_POST['titre']);
+                    unset($_POST['contenu']);
+                } 
+                else {
+                    $errors[] = 'Vous devez mettre une image en JPG, JPEG ou PNG';
             }
         }
         return $errors;
