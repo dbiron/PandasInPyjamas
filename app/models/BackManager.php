@@ -70,7 +70,7 @@ class BackManager extends Manager{
             $validation = false;
             $errors[] = 'Un contenu est requis';
         }
-        if(empty($_FILES['image']['name'])){
+        if($_FILES['image']['error'] > 0){
             $validation = false;
             $errors[]= 'Vous n\'avez pas mis d\'image';
         }
