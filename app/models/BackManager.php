@@ -78,7 +78,10 @@ class BackManager extends Manager{
             // Whiteliste des extentions autorisées
             $tableau_ext = array("jpg", "png", "jpeg");
     
-            if (in_array($newExtention, $tableau_ext)) {
+            if (!in_array($newExtention, $tableau_ext)) {
+                $errors[] = 'Vous devez mettre une image en JPG, JPEG ou PNG';
+            }
+            else{
                 // Relocalisation de l'image dans le dossier Images si le type est autorisé
                 $imageDestination = "app/public/images/".$image;
                 move_uploaded_file($imageTmp, $imageDestination);
@@ -91,9 +94,6 @@ class BackManager extends Manager{
                 ]);
                 unset($_POST['titre']);
                 unset($_POST['contenu']);
-            }
-            else{
-                $errors[] = 'Vous devez mettre une image en JPG, JPEG ou PNG';
             }
         }
         return $errors;
