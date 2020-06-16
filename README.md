@@ -53,3 +53,15 @@ Une fois tout ceci fait, vous pouvez naviguer dans le projet en l'ouvrant avec v
 
 Afin de lancer le projet en local une fois celui-ci téléchargé, lancez tout d'abord phpMyAdmin ou laragon.
 Ensuite ouvrez notre navigateur internet préféré et tapez dans la barre d'adresse "pip.test" ou encore "localhost/pip".
+
+## Version du projet en ligne
+
+https://pandas-in-pyjamas.herokuapp.com
+
+Logs Admin :
+* Pseudo -> unlogin
+* Password -> unpassword
+
+Logs User :
+* Pseudo -> test
+* Password -> test123
