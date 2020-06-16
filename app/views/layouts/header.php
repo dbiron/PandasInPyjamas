@@ -51,6 +51,7 @@
                             <?php
                             if (isset($_SESSION['admin'])) :
                             ?>
+                            <li><a title="Panel Administration du site" class="nav-item" href="admin.php?action=panelAdmin">Panel-Admin</a></li>
                             <li><a title="Deconnexion Administration du site" class="nav-item" href="admin.php?action=logout">Admin-Logout</a></li>
                             <?php
                             else :
