@@ -70,17 +70,13 @@ class BackManager extends Manager{
             $validation = false;
             $errors[] = 'Un contenu est requis';
         }
-        if($_FILES['image']['error'] > 0){
-            $validation = false;
-            $errors[]= 'Vous n\'avez pas mis d\'image';
-        }
         if ($validation) {
             // Gestion de l'upload pour l'image
             // Autorisation de certains type de fichiers
             $image = basename($_FILES["image"]["name"]);
             $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));     
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-                $errors[] = 'Votre image doit être en JPG, JPEG ou PNG';
+                $errors[] = 'Vous devez mettre une image en JPG, JPEG ou PNG';
             } 
             else {
                 // Relocalisation de l'image dans le dossier Images si le type est autorisé
