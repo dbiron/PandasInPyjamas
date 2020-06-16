@@ -60,6 +60,9 @@
             else if ($_GET['action'] == 'legalm'){
                 $ControllerFront->legalmFront();
             }
+            else if ($_GET['action'] == 'sitemap'){
+                $ControllerFront->sitemapFront();
+            }
         }
         else {
             $ControllerFront->home();

@@ -158,4 +158,12 @@ class ControllerFront {
         $keywords = 'ESport, Team, Jeux-Vidéo, Game, Counter-Strike, mentions légales';
         require 'app/views/frontOffice/legalm.php';
     }
+
+    // ++++++++++ Fonction permettant de gérer la page Mentions Légales ++++++++++ //
+    function sitemapFront(){
+        $title ='PIP - Sitemap';
+        $description ='PIP - Sitemap du site de la team';
+        $keywords = 'ESport, Team, Jeux-Vidéo, Game, Counter-Strike, Sitemap';
+        require 'app/views/frontOffice/sitemap.php';
+    }
 }
