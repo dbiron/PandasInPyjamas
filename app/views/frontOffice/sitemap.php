@@ -26,6 +26,7 @@ include 'app\views\layouts\header.php';
 		</ul>
 	</div>
 </main>
+
 <!---------- Appel du Footer ---------->
 <?php
 include 'app\views\layouts\footer.php';
