@@ -21,7 +21,7 @@ include 'app/views/layouts/header.php';
                         <div class="postCat">
                             <span class="label">Team News</span>
                         </div>
-                        <a href="index.php?action=article&id=<?= $article['id']?>" title=""><img src="app/public/images/<?= $article['image'] ?>" alt="Counter-Terrorist and Lootbox" title="Counter-Terrorist and Lootbox"></a>
+                        <a href="article&id=<?= $article['id']?>" title=""><img src="app/public/images/<?= $article['image'] ?>" alt="Counter-Terrorist and Lootbox" title="Counter-Terrorist and Lootbox"></a>
                     </figure>
                     <div class="newsInnerContent">
                         <time datetime="2020-03-10" class="postDate"><?= $article['created_at'] ?></time>
@@ -29,7 +29,7 @@ include 'app/views/layouts/header.php';
                         <p><?= nl2br($article['content']) ?></p>
                     </div>
                     <div class="newsFooter">
-                        <a href="index.php?action=article&id=<?= $article['id']?>" title="Lire l'article">Lire l'article</a>
+                        <a href="article&id=<?= $article['id']?>" title="Lire l'article">Lire l'article</a>
                     </div>
                 </div>
             </article>

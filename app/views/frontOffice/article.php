@@ -26,7 +26,7 @@ include 'app/views/layouts/header.php';
             <!---------- Affichage du formulaire de commentaire si présence d'une session User ---------->
             <div>
             <h2>Poster un commentaire</h2>
-                <form method="post" action="index.php?action=postComment" >
+                <form method="post" action="postComment" >
                 <?php if(isset($errors)) :
                 if($errors) : 
                 foreach($errors as $error) : ?>

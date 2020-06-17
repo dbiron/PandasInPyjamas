@@ -7,7 +7,7 @@ include 'app/views/layouts/header.php';
 <main class="content">
     <!---------- Login Form ---------->
     <section id="login">
-        <form class="loginForm" method="post" action="index.php?action=loginUser" onsubmit="return verifForm(this)">
+        <form class="loginForm" method="post" action="loginUser" onsubmit="return verifForm(this)">
             <?php if(isset($errors)) :
                 if($errors) : 
                 foreach($errors as $error) :  ?>

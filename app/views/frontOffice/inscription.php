@@ -7,7 +7,7 @@ include 'app/views/layouts/header.php';
 <main class="content">
     <!---------- Inscription Form ---------->
     <section id="inscription">
-        <form class="inscriptionForm" method="post" action="index.php?action=newUser" onsubmit="return verifForm(this)">
+        <form class="inscriptionForm" method="post" action="newUser" onsubmit="return verifForm(this)">
             <?php if(isset($errors)) :
                 if($errors) : 
                 foreach($errors as $error) : ?>

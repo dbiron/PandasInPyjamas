@@ -7,7 +7,7 @@ include 'app/views/layouts/header.php';
 <main class="content">
     <!---------- Banner Team ---------->
     <section class="banner">
-            <img src="app/public/images/map-dust2.png">
+            <img src="app/public/images/map-dust2.png" alt="Banniere dust2 about" title="Banniere dust2 about">
             <div class="bannerFilter">
                 <h1>TEAM<br><span>Apprenez à connaitre nos joueurs et visionnez leurs stats en temps réel</span></h1>
             </div>  
@@ -18,7 +18,7 @@ include 'app/views/layouts/header.php';
         <article class="teamBloc">
             <div class="teamCard">
                 <figure class="playerThumb">
-                    <a href="#"><img src="app/public/images/rush.jpeg" alt="photo player Rush" title="photo player Rush"></a>
+                    <img src="app/public/images/rush.jpeg" alt="photo player Rush" title="photo player Rush">
                 </figure>
                 <div class="playerContent">
                     <h2>Rush</h2>
@@ -87,7 +87,7 @@ include 'app/views/layouts/header.php';
         <article class="teamBloc">
             <div class="teamCard">
                 <figure class="playerThumb">
-                    <a href="#"><img src="app/public/images/mouz.jpeg" alt="photo player mouz" title="photo player mouz"></a>
+                    <img src="app/public/images/mouz.jpeg" alt="photo player mouz" title="photo player mouz">
                 </figure>
                 <div class="playerContent">
                     <h2>mouz</h2>
@@ -156,7 +156,7 @@ include 'app/views/layouts/header.php';
         <article class="teamBloc">
             <div class="teamCard">
                 <figure class="playerThumb">
-                    <a href="#"><img src="app/public/images/dupreeh.jpeg" alt="photo player dupreeh" title="photo player dupreeh"></a>
+                    <img src="app/public/images/dupreeh.jpeg" alt="photo player dupreeh" title="photo player dupreeh">
                 </figure>
                 <div class="playerContent">
                     <h2>dupreeh</h2>
@@ -225,7 +225,7 @@ include 'app/views/layouts/header.php';
         <article class="teamBloc">
             <div class="teamCard">
                 <figure class="playerThumb">
-                    <a href="#"><img src="app/public/images/deadfox.jpeg" alt="photo player deadfox" title="photo player deadfox"></a>
+                    <img src="app/public/images/deadfox.jpeg" alt="photo player deadfox" title="photo player deadfox">
                 </figure>
                 <div class="playerContent">
                     <h2>deadfox</h2>
@@ -294,7 +294,7 @@ include 'app/views/layouts/header.php';
         <article class="teamBloc">
             <div class="teamCard">
                 <figure class="playerThumb">
-                    <a href="#"><img src="app/public/images/cajunb.jpeg" alt="photo player cajunb" title="photo player cajunb"></a>
+                    <img src="app/public/images/cajunb.jpeg" alt="photo player cajunb" title="photo player cajunb">
                 </figure>
                 <div class="playerContent">
                     <h2>cajunb</h2>
@@ -363,7 +363,7 @@ include 'app/views/layouts/header.php';
         <article class="teamBloc">
             <div class="teamCard">
                 <figure class="playerThumb">
-                    <a href="#"><img src="app/public/images/flusha.jpeg" alt="photo player flusha" title="photo player flusha"></a>
+                    <img src="app/public/images/flusha.jpeg" alt="photo player flusha" title="photo player flusha">
                 </figure>
                 <div class="playerContent">
                     <h2>flusha</h2>

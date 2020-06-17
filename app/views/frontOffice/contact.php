@@ -7,14 +7,14 @@ include 'app/views/layouts/header.php';
 <main class="content">
     <!---------- Banner Contact ---------->
     <section class="banner">
-        <img src="app/public/images/map-museum.png">
+        <img src="app/public/images/map-museum.png" alt="Banniere museum about" title="Banniere museum about">
         <div class="bannerFilter">
             <h1>CONTACT<br><span>Si vous voulez nous envoyer un petit message, c'est par ici que ça se passe</span></h1>
         </div>   
     </section>
     <!---------- Contact Form ---------->
     <section id="contact">
-        <form class="contactForm" method="post" action="index.php?action=contactMail" onsubmit="return verifForm(this)">
+        <form class="contactForm" method="post" action="contactMail" onsubmit="return verifForm(this)">
             <?php if(isset($errors)) :
             if($errors) : 
             foreach($errors as $error) : ?>

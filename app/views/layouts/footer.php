@@ -21,13 +21,14 @@
                     </div>
                     <!---------- Intégration du copyright - CGU - Mention Légales ---------->
                     <div class="copyright">
-                        <p>&copy; Copyright 2020 Pandas in Pyjamas - <a title="Nos CGU" href="index.php?action=cgu">CGU</a> - <a title="Nos CGU" href="index.php?action=legalm">Mentions Légales</a> - <a title="Site Map" href="sitemap.xml">Sitemap</a></p>
+                        <p>&copy; Copyright 2020 Pandas in Pyjamas - <a title="Nos CGU" href="cgu">CGU</a> - <a title="Nos Mentions Légales" href="legalm">Mentions Légales</a> - <a title="Site Map" href="sitemap.xml">Sitemap</a></p>
                     </div>
                 </div>
             </div>
         </footer>
         <!---------- Lancement de script permettant l'affichage de l'alerte cookie ---------->
         <script src="app/public/js/cookie.js"></script>
+        <!---------- Lancement du modal pour la suppression d'article ---------->
         <script src="app/public/js/modal.js"></script>
         <!--++++++++ Footer (END) ++++++++-->
     </body>

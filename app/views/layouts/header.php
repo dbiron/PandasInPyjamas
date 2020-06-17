@@ -22,10 +22,10 @@
                         </label>
                         <ul id="topMenuActive">
                             <li><a title="Page d'accueil" class="nav-item active" href="index.php">Home</a></li>
-                            <li><a title="Page des News" class="nav-item" href="index.php?action=news">News</a></li>
-                            <li><a title="Page de la Team" class="nav-item" href="index.php?action=team">Team</a></li>
-                            <li><a title="A propos de nous" class="nav-item" href="index.php?action=about">About-Us</a></li>
-                            <li><a title="Page de Contact" class="nav-item" href="index.php?action=contact">Contact</a></li>
+                            <li><a title="Page des News" class="nav-item" href="news">News</a></li>
+                            <li><a title="Page de la Team" class="nav-item" href="team">Team</a></li>
+                            <li><a title="A propos de nous" class="nav-item" href="about">About-Us</a></li>
+                            <li><a title="Page de Contact" class="nav-item" href="contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -38,13 +38,13 @@
                             <?php
                             if (isset($_SESSION['user'])) :
                             ?>
-                            <li><a title="Déconnexion espace membre" class="nav-item" href="index.php?action=deconnexion">Déconnexion</a></li>
-                            <li><a title="Page compte membre" class="nav-item" href="index.php?action=compte">Mon-Compte</a></li>
+                            <li><a title="Déconnexion espace membre" class="nav-item" href="deconnexion">Déconnexion</a></li>
+                            <li><a title="Page compte membre" class="nav-item" href="compte">Mon-Compte</a></li>
                             <?php
                             else :
                             ?>
-                            <li><a title="Connexion espace membre" class="nav-item" href="index.php?action=login">Login</a></li>
-                            <li><a title="Inscription espace membre" class="nav-item" href="index.php?action=inscription">Inscription</a></li>
+                            <li><a title="Connexion espace membre" class="nav-item" href="login">Login</a></li>
+                            <li><a title="Inscription espace membre" class="nav-item" href="inscription">Inscription</a></li>
                             <?php
                             endif
                             ?>
