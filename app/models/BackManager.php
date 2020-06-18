@@ -72,7 +72,8 @@ class BackManager extends Manager{
         }
         if(!isset($_FILES['image']) || $_FILES['image']['error'] > 0){
             $validation = false;
-            $errors[]= 'Vous n\'avez pas mis d\'image';
+            // $errors[]= 'Vous n\'avez pas mis d\'image';
+            $errors[]=$_FILES['image']['error'];
         }
         if ($validation) {
             // Gestion de l'upload pour l'image
