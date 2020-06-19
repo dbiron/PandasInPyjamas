@@ -22,7 +22,7 @@ include 'app/views/layouts/header.php';
             <div class="newArticleInput">
                 <input type="text" name="titre" placeholder="Titre *"
                     value="<?php if(isset($_POST['titre'])) echo $_POST['titre'] ?>">
-                <input type="file" name="file">
+                <input type="file" name="image">
             </div>
             <div class="newArticleTextarea">
                 <textarea name="contenu" placeholder="Corps de l'article *"
