@@ -11,19 +11,20 @@ include 'app/views/layouts/header.php';
             <?php if(isset($errors)) :
                 if($errors) : 
                 foreach($errors as $error) :  ?>
-                    <div class="erreur"><?= $error ?></div>
+            <div class="erreur"><?= $error ?></div>
             <?php
             endforeach; 
             endif;
             endif ?>
 
             <div class="loginInput">
-                <input type="text" name="pseudo" placeholder="Pseudo *" value="<?php if(isset($_POST['pseudo'])) echo($_POST['pseudo']) ?>">
+                <input type="text" name="pseudo" placeholder="Pseudo *"
+                    value="<?php if(isset($_POST['pseudo'])) echo($_POST['pseudo']) ?>">
                 <input type="password" name="password" placeholder="Mot de passe *">
-            </div> 
+            </div>
             <div class="loginButton buttonEffect">
                 <input type="submit" value="Se Connecter" name="envoi">
-            </div>       
+            </div>
         </form>
     </section>
 </main>

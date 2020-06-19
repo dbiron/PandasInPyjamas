@@ -120,4 +120,22 @@ class ControllerBack {
         $deleteArticle ->delete($id);
         header ('Location: admin.php?action=editArticle');
     }
+
+    // ++++++++++ Fonction permettant de gérer la page EditArticle ++++++++++ //
+    function messagerie(){
+        $title ='PIP - Messagerie';
+        $description ='PIP - Page de Messagerie';
+        $keywords = 'ESport, Team, Jeux-Vidéo, Game, Counter-Strike, Messagerie';
+        if ($_SESSION['admin']) {
+            $listMessages = new \Project\Models\BackManager();
+            $messages = $listMessages->listMessages();
+            require 'app/views/backOffice/messagerie.php';
+        }
+        else
+        {
+            // A changer pour page unhotorize connection
+            header ('Location: admin.php?action=admin');
+        }      
+    }
+
 }

@@ -44,7 +44,6 @@ class BackManager extends Manager{
     }
 
     // ++++++++++ Fonction d'affichage des articles par ordre de création Descandant ++++++++++ //
-    // ++++++++++ Ceci concerne la page News ++++++++++ //
     public function listArticles(){
         // Connexion à la DB
         $bdd = $this -> dbConnect();
@@ -85,7 +84,7 @@ class BackManager extends Manager{
                 $post = $bdd->prepare('INSERT INTO articles(title, content, image) VALUES(:title, :content, :image)');
                 $post -> execute([
                     'title' => htmlentities($titre),
-                    'content' => htmlentities($contenu),
+                    'content' => nl2br(htmlentities($contenu)),
                     'image' => htmlentities($image),
                 ]);
                 unset($_POST['titre']);
@@ -129,4 +128,15 @@ class BackManager extends Manager{
         // Suppression de l'article via son ID
         $delete->execute([$id]);
     }
+
+    // ++++++++++ Fonction d'affichage des messages par ordre de création Descandant ++++++++++ //
+    public function listMessages(){
+        // Connexion à la DB
+        $bdd = $this -> dbConnect();
+        // Préparation de la DB et exécution
+        $req = $bdd->prepare ("SELECT id, nom, prenom, mail, sujet, content, created_at FROM messages ORDER BY created_at DESC");
+        $req->execute(array());
+        return $req;
+    }
+
 }

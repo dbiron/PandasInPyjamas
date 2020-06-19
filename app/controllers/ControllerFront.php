@@ -21,9 +21,9 @@ class ControllerFront {
     }
 
     // ++++++++++ Fonction permettant d'envoyer un Mail via la page contact ++++++++++ //
-    function contactMail(){
-        $contactMail = new \Project\Models\FrontManager();
-        $errors = $contactMail->contactMail();
+    function contactMessage(){
+        $contactMessage = new \Project\Models\FrontManager();
+        $errors = $contactMessage->contactMessage();
         require 'app/views/frontOffice/contact.php';
     }
 

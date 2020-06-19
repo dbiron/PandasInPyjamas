@@ -11,12 +11,12 @@
                         <!-- Création du Menu Burger pour Mobile -->
                         <input type="checkbox" id="menuMobile" role="button">
                         <label for="menuMobile" class="menuMobile">
-                            <!-- Création de l'image du menu burger en svg -->                           
+                            <!-- Création de l'image du menu burger en svg -->
                             <svg viewBox="0 0 100 80" width="40" height="40">
                                 <g color="#79ad09">
-                                <rect width="100" height="15" fill="currentColor"></rect>
-                                <rect y="30" width="100" height="15" fill="currentColor"></rect>
-                                <rect y="60" width="100" height="15" fill="currentColor"></rect>
+                                    <rect width="100" height="15" fill="currentColor"></rect>
+                                    <rect y="30" width="100" height="15" fill="currentColor"></rect>
+                                    <rect y="60" width="100" height="15" fill="currentColor"></rect>
                                 </g>
                             </svg>
                         </label>
@@ -30,7 +30,8 @@
                     </nav>
                 </div>
                 <!-- Intégration du logo -->
-                <a title="Page d'accueil" href="index.php"><img src="app/public/images/panda-logo.png" alt="Logo Panda" title="Logo Panda"></a>
+                <a title="Page d'accueil" href="index.php"><img src="app/public/images/panda-logo.png" alt="Logo Panda"
+                        title="Logo Panda"></a>
                 <!-- Création du menu de droite -->
                 <div class="login">
                     <nav class="topMenuRight">
@@ -38,25 +39,30 @@
                             <?php
                             if (isset($_SESSION['user'])) :
                             ?>
-                            <li><a title="Déconnexion espace membre" class="nav-item" href="deconnexion">Déconnexion</a></li>
+                            <li><a title="Déconnexion espace membre" class="nav-item" href="deconnexion">Déconnexion</a>
+                            </li>
                             <li><a title="Page compte membre" class="nav-item" href="compte">Mon-Compte</a></li>
                             <?php
                             else :
                             ?>
                             <li><a title="Connexion espace membre" class="nav-item" href="login">Login</a></li>
-                            <li><a title="Inscription espace membre" class="nav-item" href="inscription">Inscription</a></li>
+                            <li><a title="Inscription espace membre" class="nav-item" href="inscription">Inscription</a>
+                            </li>
                             <?php
                             endif
                             ?>
                             <?php
                             if (isset($_SESSION['admin'])) :
                             ?>
-                            <li><a title="Panel Administration du site" class="nav-item" href="admin.php?action=panelAdmin">Panel-Admin</a></li>
-                            <li><a title="Deconnexion Administration du site" class="nav-item" href="admin.php?action=logout">Admin-Logout</a></li>
+                            <li><a title="Panel Administration du site" class="nav-item"
+                                    href="admin.php?action=panelAdmin">Panel-Admin</a></li>
+                            <li><a title="Deconnexion Administration du site" class="nav-item"
+                                    href="admin.php?action=logout">Admin-Logout</a></li>
                             <?php
                             else :
                             ?>
-                            <li><a title="Connexion Administration du site" class="nav-item" href="admin.php?action=admin">Admin</a></li>
+                            <li><a title="Connexion Administration du site" class="nav-item"
+                                    href="admin.php?action=admin">Admin</a></li>
                             <?php
                             endif
                             ?>

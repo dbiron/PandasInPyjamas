@@ -47,6 +47,9 @@
                 $id = htmlspecialchars($_GET['id']);
                 $ControllerBack->deleteArticle($id);
             }
+            else if ($_GET['action'] == 'messagerie'){
+                $ControllerBack->messagerie();
+            }
         }
 
     } catch (Exception $e){

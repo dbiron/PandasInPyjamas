@@ -15,8 +15,8 @@
             if ($_GET['action'] == 'contact'){
                 $ControllerFront->contactFront();
             }
-            else if ($_GET['action'] == 'contactMail'){
-                $ControllerFront->contactMail();
+            else if ($_GET['action'] == 'contactMessage'){
+                $ControllerFront->contactMessage();
             }
             else if ($_GET['action'] == 'news'){
                 $ControllerFront->newsFront();

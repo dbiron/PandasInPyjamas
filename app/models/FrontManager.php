@@ -108,13 +108,11 @@ class FrontManager extends Manager{
             if (password_verify($password, $login['password'])) {
                 $_SESSION['user'] = $login['id'];
             }
-            else
-            {
+            else{
                 $errors[] = 'Cela ne correspond à aucun compte actif';
             }
         }
-        else
-        {
+        else{
             $errors[] = 'Cela ne correspond à aucun compte actif';
         }
         return $errors;
@@ -183,39 +181,37 @@ class FrontManager extends Manager{
         }
     }
 
-    // ++++++++++ Fonction permettant d'envoyer un mail via le formulaire de contact ++++++++++ //
-    function contactMail(){
+    // ++++++++++ Fonction permettant d'envoyer un message via le formulaire de contact ++++++++++ //
+    function contactMessage(){
+        // Connexion à la DB
+        $bdd = $this -> dbConnect();
         extract($_POST);
         // Gestion des Erreurs
         $validation = true;
         $errors = [];
-        if(empty($nom) || empty($prenom) || empty($email) || empty($sujet) || empty($texte)){
+        if(empty($nom) || empty($prenom) || empty($mail) || empty($sujet) || empty($content)){
             $validation = false;
             $errors[] = 'Tous les Champs sont OBLIGATOIRES !!!';
         }
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        if(!filter_var($mail, FILTER_VALIDATE_EMAIL)){
             $validation = false;
             $errors[] = 'L\'Adresse Mail n\'est pas Valide !!!';
         }
         if($validation){
-            $to = 'sfu1982@gmail.com';
-            $from = 'Nouveau Message de : ' . $nom;
-            $message = '
-                <h1> Sujet du message : ' . $sujet .'</h1>
-                <h2> Nouveau Message de : ' . $nom .' ' . $prenom .'</h2>
-                <h2> Adresse E-Mail : ' . $email .'</h2>
-                <p>'. nl2br($texte) . '</p>';
-                $headers = 'From' . $nom . ' ' . $prenom .' < ' . $email . ' > ' . "\r\n";
-                $headers = 'MIME-Version: 1.0' . "\r\n";
-                $headers = 'Content-type: text/html; charset=utf-8' . "\r\n";
-                mail($to, $from, $message, $headers);
-                unset($_POST['nom']);
-                unset($_POST['prenom']);
-                unset($_POST['email']);
-                unset($_POST['sujet']);
-                unset($_POST['texte']);   
+            $message = $bdd->prepare('INSERT INTO messages(nom, prenom, mail, sujet, content) VALUES(:nom, :prenom, :mail, :sujet, :content)');
+            $message -> execute([
+                'nom' => htmlentities($nom),
+                'prenom' => htmlentities($prenom),
+                'mail' => htmlentities($mail),
+                'sujet' => htmlentities($sujet),
+                'content' => nl2br(htmlentities($content)),
+            ]);
+            unset($_POST['nom']);
+            unset($_POST['prenom']);
+            unset($_POST['mail']);
+            unset($_POST['sujet']);
+            unset($_POST['content']);   
         }
         return $errors;
     }
-    
 }

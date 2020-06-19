@@ -7,10 +7,10 @@ include 'app/views/layouts/header.php';
 <main class="content">
     <!---------- Banner Team ---------->
     <section class="banner">
-            <img src="app/public/images/map-dust2.png" alt="Banniere dust2 about" title="Banniere dust2 about">
-            <div class="bannerFilter">
-                <h1>TEAM<br><span>Apprenez à connaitre nos joueurs et visionnez leurs stats en temps réel</span></h1>
-            </div>  
+        <img src="app/public/images/map-dust2.png" alt="Banniere dust2 about" title="Banniere dust2 about">
+        <div class="bannerFilter">
+            <h1>TEAM<br><span>Apprenez à connaitre nos joueurs et visionnez leurs stats en temps réel</span></h1>
+        </div>
     </section>
     <!---------- Section Team ---------->
     <section id="team">
@@ -290,15 +290,15 @@ include 'app/views/layouts/header.php';
                 </div>
             </div>
         </article>
-        <!---------- 5ème Membre de la team (CAJUNB) ---------->
+        <!---------- 5ème Membre de la team (SUMER) ---------->
         <article class="teamBloc">
             <div class="teamCard">
                 <figure class="playerThumb">
-                    <img src="app/public/images/cajunb.jpeg" alt="photo player cajunb" title="photo player cajunb">
+                    <img src="app/public/images/summer.png" alt="photo player summer" title="photo player summer">
                 </figure>
                 <div class="playerContent">
-                    <h2>cajunb</h2>
-                    <h3>René Borg</h3>
+                    <h2>Summer</h2>
+                    <h3>YuLun Cai</h3>
                     <p>Titulaire</p>
                 </div>
                 <div class="playerStats">
@@ -306,7 +306,7 @@ include 'app/views/layouts/header.php';
                         <h3>Total Kills</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunb_total_kills"></p>
+                        <p id="summer_total_kills"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -314,7 +314,7 @@ include 'app/views/layouts/header.php';
                         <h3>Total Death</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunb_total_deaths"></p>
+                        <p id="summer_total_deaths"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -322,7 +322,7 @@ include 'app/views/layouts/header.php';
                         <h3>Total Planted Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunb_total_planted_bombs"></p>
+                        <p id="summer_total_planted_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -330,7 +330,7 @@ include 'app/views/layouts/header.php';
                         <h3>Total Defused Bombs</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunb_total_defused_bombs"></p>
+                        <p id="summer_total_defused_bombs"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -338,7 +338,7 @@ include 'app/views/layouts/header.php';
                         <h3>Total MVP</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunb_total_mvps"></p>
+                        <p id="summer_total_mvps"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -346,7 +346,7 @@ include 'app/views/layouts/header.php';
                         <h3>Total Matches Won</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunb_total_matches_won"></p>
+                        <p id="summer_total_matches_won"></p>
                     </div>
                 </div>
                 <div class="playerStats">
@@ -354,7 +354,7 @@ include 'app/views/layouts/header.php';
                         <h3>Total Matches Played</h3>
                     </div>
                     <div class="playerStatsNumber">
-                        <p id="cajunb_total_matches_played"></p>
+                        <p id="summer_total_matches_played"></p>
                     </div>
                 </div>
             </div>

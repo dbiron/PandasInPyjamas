@@ -9,7 +9,7 @@ include 'app/views/layouts/header.php';
     <section id="404">
         <h1>404</h1>
         <p>Oooops !!! La page que vous cherchez semble introuvable</p>
-        <a title="Page d'accueil" href="index.php">Retour à l'accueil</a>    
+        <a title="Page d'accueil" href="index.php">Retour à l'accueil</a>
     </section>
 </main>
 
