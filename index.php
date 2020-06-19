@@ -69,6 +69,7 @@
         }
 
     } catch (Exception $e){
+        var_dump($e);
         require 'app/views/frontOffice/page-404.php';
     }
 ?>
