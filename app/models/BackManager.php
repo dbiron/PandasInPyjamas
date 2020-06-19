@@ -74,10 +74,10 @@ class BackManager extends Manager{
             // Gestion de l'upload pour l'image
             // Autorisation de certains type de fichiers
             $image = basename($_FILES["image"]["name"]);
-            $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));     
-            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-                $errors[] = 'Vous devez mettre une image en JPG, JPEG ou PNG';
-            } 
+            $type_file = $_FILES['image']['type'];
+            if( !strstr($type_file, 'jpg') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'png')) {
+                $errors[] = 'Votre image doit être en JPG, JPEG ou PNG';
+            }
             else {
                 // Relocalisation de l'image dans le dossier Images si le type est autorisé
                 move_uploaded_file($_FILES['image']['tmp_name'], 'app/public/images/'.$image);
