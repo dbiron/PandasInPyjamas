@@ -10,7 +10,6 @@ include 'app/views/layouts/header.php';
 		<h1>Site Map</h1>
 		<h2><a href="https://pandas-in-pyjamas.herokuapp.com">Homepage</a></h2>
 		<ul>
-		<li class="lpage"><a href="https://pandas-in-pyjamas.herokuapp.com/" title="Pandas in Pyjamas - Le site de la Team Esport">Pandas in Pyjamas - Le site de la Team Esport</a></li>
 <li><a href="https://pandas-in-pyjamas.herokuapp.com/index.php" title="Pandas in Pyjamas - Le site de la Team Esport">Pandas in Pyjamas - Le site de la Team Esport</a></li>
 <li><a href="https://pandas-in-pyjamas.herokuapp.com/news" title="PIP - Liste des news de la team">PIP - Liste des news de la team</a></li>
 <li><a href="https://pandas-in-pyjamas.herokuapp.com/team" title="PIP - Les membres de la team">PIP - Les membres de la team</a></li>
