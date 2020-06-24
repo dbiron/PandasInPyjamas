@@ -21,7 +21,6 @@ class BackManager extends Manager{
             $login = $bdd->prepare('SELECT * FROM admins WHERE pseudo=?');
             $login->execute([$pseudo]);
             $login = $login->fetch();
-            var_dump($login);
             if (password_verify($password, $login['password'])) {
                 $_SESSION['admin'] = $login['id'];
             }
