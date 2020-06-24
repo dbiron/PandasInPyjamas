@@ -74,8 +74,8 @@ class BackManager extends Manager{
             // Autorisation de certains type de fichiers
             $image = basename($_FILES["image"]["name"]);
             $type_file = $_FILES['image']['type'];
-            if( !strstr($type_file, 'jpg') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'png')) {
-                $errors[] = 'Votre image doit être en JPG, JPEG ou PNG';
+            if( !strstr($type_file, 'png')) {
+                $errors[] = 'Votre image doit être en PNG';
             }
             else {
                 // Relocalisation de l'image dans le dossier Images si le type est autorisé
