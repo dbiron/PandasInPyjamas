@@ -10,66 +10,68 @@
     try {
 
         $ControllerFront = new \Project\Controllers\ControllerFront(); // Objet Controller
-        
-        if (isset($_GET['action'])){
-            if ($_GET['action'] == 'contact'){
-                $ControllerFront->contactFront();
+        if(isset($_GET['action'])){
+    
+            switch ($_GET['action']) {
+                case 'contact':
+                    $controllerFront->contactFront();
+                break;
+                case 'contactMessage':
+                    $controllerFront->contactMessage();
+                break;
+                case 'news':
+                    $controllerFront->newsFront();
+                break;
+                case 'team':
+                    $controllerFront->teamFront();
+                break;
+                case 'about':
+                    $controllerFront->aboutFront();
+                break;
+                case 'article':
+                    $id = htmlspecialchars($_GET['id']);
+                    $ControllerFront->articleFront($id);
+                break;
+                case 'postComment':
+                    $ControllerFront->postComment();
+                break;
+                case 'inscription':
+                    $ControllerFront->inscriptionFront();
+                break;
+                case 'newUser':
+                    $ControllerFront->newUser();
+                break;
+                case 'login':
+                    $ControllerFront->loginFront();
+                break; 
+                case 'loginUser':
+                    $pseudo = htmlspecialchars($_POST['pseudo']);
+                    $password = htmlspecialchars($_POST['password']);
+                    $ControllerFront->loginUser($pseudo, $password);
+                break; 
+                case 'compte':
+                    $ControllerFront->compteFront();
+                break; 
+                case 'deconnexion':
+                    $ControllerFront->deconnexion();
+                break; 
+                case 'cgu':
+                    $ControllerFront->cguFront();
+                break; 
+                case 'legalm':
+                    $ControllerFront->legalmFront();
+                break; 
+                case 'sitemap':
+                    $ControllerFront->sitemapFront();
+                break; 
+                default :          
+                require 'app/views/frontOffice/page-404.php';
+                break;
             }
-            else if ($_GET['action'] == 'contactMessage'){
-                $ControllerFront->contactMessage();
-            }
-            else if ($_GET['action'] == 'news'){
-                $ControllerFront->newsFront();
-            }
-            else if ($_GET['action'] == 'team'){
-                $ControllerFront->teamFront();
-            }
-            else if ($_GET['action'] == 'about'){
-                $ControllerFront->aboutFront();
-            }
-            else if ($_GET['action'] == 'article'){
-                $id = htmlspecialchars($_GET['id']);
-                $ControllerFront->articleFront($id);
-            }
-            else if ($_GET['action'] == 'postComment'){
-                $ControllerFront->postComment();
-            }
-            else if ($_GET['action'] == 'inscription'){
-                $ControllerFront->inscriptionFront();
-            }
-            else if ($_GET['action'] == 'newUser'){
-                $ControllerFront->newUser();
-            }
-            else if ($_GET['action'] == 'login'){
-                $ControllerFront->loginFront();
-            }
-            else if ($_GET['action'] == 'loginUser'){
-                $pseudo = htmlspecialchars($_POST['pseudo']);
-                $password = htmlspecialchars($_POST['password']);
-                $ControllerFront->loginUser($pseudo, $password);
-            }
-            else if ($_GET['action'] == 'compte'){
-                $ControllerFront->compteFront();
-            }
-            else if ($_GET['action'] == 'deconnexion'){
-                $ControllerFront->deconnexion();
-            }
-            else if ($_GET['action'] == 'cgu'){
-                $ControllerFront->cguFront();
-            }
-            else if ($_GET['action'] == 'legalm'){
-                $ControllerFront->legalmFront();
-            }
-            else if ($_GET['action'] == 'sitemap'){
-                $ControllerFront->sitemapFront();
-            }
+        }else{
+            $controllerFront->home();
         }
-        else {
-            $ControllerFront->home();
-        }
-
     } catch (Exception $e){
-        var_dump($e);
         require 'app/views/frontOffice/page-404.php';
     }
 ?>
