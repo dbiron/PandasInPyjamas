@@ -1,18 +1,14 @@
-<!---------- Appel du Head et du Header ---------->
+<!---------- Appel du Head ---------->
 <?php
 include 'app/views/layouts/head.php';
-include 'app/views/layouts/header.php';
 ?>
 
 <main class="content">
     <!---------- Page 404 ---------->
-    <section id="404">
+    <section id="page-404">
         <h1>404</h1>
-        <p>Oooops !!! La page que vous cherchez semble introuvable</p>
+        <p>Oooops !!!</p>
+        <p>La page que vous cherchez semble introuvable</p>
         <a title="Page d'accueil" href="index.php">Retour à l'accueil</a>
     </section>
 </main>
-
-<!---------- Appel du Footer ---------->
-<?php
-include 'app/views/layouts/footer.php';
